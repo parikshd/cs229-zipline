@@ -23,7 +23,6 @@ def give_error(y_out, y, x):
     return cnt / len(y_out)
 
 datasets = pd.read_csv('output/flights_pass_1_na_0.csv')
-
 datasets_test = pd.read_csv('testinput/flights_new_till_03dec.csv')
 
 test_columns = datasets_test.columns
