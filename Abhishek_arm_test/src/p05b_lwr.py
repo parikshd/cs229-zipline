@@ -19,9 +19,9 @@ def main(tau, train_path, eval_path):
     x_train, y_train,x_eval,y_eval = util.load_dataset_new(train_path,eval_path)
 
     # Feature Scaling
-#    sc_X = StandardScaler()
-#    x_train = sc_X.fit_transform(x_train)
-#    X_test_transformed = sc_X.fit_transform(x_eval)
+    sc_X = StandardScaler()
+    x_train = sc_X.fit_transform(x_train)
+    X_test_transformed = sc_X.fit_transform(x_eval)
 
     print("Train shape:" + str(x_train.shape))
     print("Eval shape:" + str(x_eval.shape))
@@ -30,7 +30,7 @@ def main(tau, train_path, eval_path):
     clf = LocallyWeightedLinearRegression(tau)
     clf.fit(x_train, y_train)
 
-    p_eval = clf.predict(x_eval)
+    p_eval = clf.predict(X_test_transformed)
 
     print(p_eval)
     # for i in range(len(p_eval)):

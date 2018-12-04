@@ -10,9 +10,10 @@ def give_error(y_out, y, x):
     cntfalse = 0
     for i in range(len(y_out)):
         if (y_out[i] == y[i]):
+            print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
             cnt += 1
         else:
-            #print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
+            print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
             cntfalse += 1
             if (y_out[i] == 2):
                 print("Flight " + str(int(x[i][flight_id_index])) + " might need maintaince, our algorithm predicted it would have mission failure!")
@@ -22,7 +23,7 @@ def give_error(y_out, y, x):
     print("Predicted " + str(cntfalse) + "/" + str(len(y_out)) + " incorrectly.")
     return cnt / len(y_out)
 
-datasets = pd.read_csv('output/flights_pass_1_na_0.csv')
+datasets = pd.read_csv("output/flights_pass_1_na_0.csv")
 datasets_test = pd.read_csv('testinput/flights_new_till_03dec.csv')
 
 test_columns = datasets_test.columns
@@ -33,8 +34,11 @@ datasets_test.drop(to_del_test_columns, axis=1, inplace=True)
 
 datasets = datasets[datasets_test.columns]
 
+datasets['highest_failure_level.id'] = datasets['highest_failure_level.id'].astype(float)
+datasets_test['highest_failure_level.id'] = datasets_test['highest_failure_level.id'].astype(float)
+
 print("Model trained on " + str(datasets.shape[0]) + " flights with " + str(datasets.shape[1]) + " features")
-print("Ruuning tests on " + str(datasets_test.shape[0]) + " flights")
+print("Runing tests on " + str(datasets_test.shape[0]) + " flights")
 
 flight_id_index = datasets_test.columns.get_loc("config.flight_id")
 
@@ -99,8 +103,8 @@ X_second_pass = sc_X_second_pass.fit_transform(X_second_pass)
 
 # Fitting the classifier into the Training set
 from sklearn.svm import SVC
-classifier = SVC(kernel = 'rbf', random_state = 0, gamma = 'auto')
-classifier_second_pass = SVC(kernel = 'rbf', random_state = 0, gamma = 'auto')
+classifier = SVC(kernel = 'rbf', random_state = 0, gamma = 'auto',probability=True)
+classifier_second_pass = SVC(kernel = 'rbf', random_state = 0, gamma = 'auto',probability=True)
 
 # Predicting the test set results
 classifier.fit(X,Y)
@@ -109,17 +113,25 @@ classifier_second_pass.fit(X_second_pass,Y_second_pass)
 # Y_pred_train = classifier.predict(X_Train)
 # print(give_error(Y_pred_train,Y_Train))
 
-Y_Pred_first_pass = classifier.predict(X_test_transformed)
-for i in range(len(Y_Pred_first_pass)):
-    if (Y_Pred_first_pass[i] == 0):
-        Y_Pred_first_pass[i] = 1
-    else:
-        Y_Pred_first_pass[i] = 2
-        Y_Pred_second_pass = classifier_second_pass.predict(X_test_transformed[i].reshape(1, -1))
-        if (Y_Pred_second_pass == 1):
-            print("got 1 value")
-            Y_Pred_first_pass[i] = 4
+#print('w = ',classifier.coef_)
 
-accuracy = give_error(Y_Pred_first_pass,Y_test, X_test)
-print("Accuracy:" + str(accuracy*100))
+Y_Pred_first_pass = classifier.predict(X_test_transformed)
+class_probabilities = classifier.predict_proba(X_test_transformed)
+for i in range(len(Y_Pred_first_pass)):
+    print(Y_Pred_first_pass[i])
+    print(class_probabilities[i])
+#print(class_probabilities)
+# TODO uncomment below
+# for i in range(len(Y_Pred_first_pass)):
+#     if (Y_Pred_first_pass[i] == 0):
+#         Y_Pred_first_pass[i] = 1
+#     else:
+#         Y_Pred_first_pass[i] = 2
+#         Y_Pred_second_pass = classifier_second_pass.predict(X_test_transformed[i].reshape(1, -1))
+#         if (Y_Pred_second_pass == 1):
+#             print("got 1 value")
+#             Y_Pred_first_pass[i] = 4
+#
+# accuracy = give_error(Y_Pred_first_pass,Y_test, X_test)
+# print("Accuracy:" + str(accuracy*100))
 

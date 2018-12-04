@@ -92,8 +92,8 @@ X_second_pass = sc_X_second_pass.fit_transform(X_second_pass)
 
 # Fitting the classifier into the Training set
 from sklearn.svm import SVC
-classifier = SVC(kernel = 'rbf', random_state = 0)
-classifier_second_pass = SVC(kernel = 'rbf', random_state = 0)
+classifier = SVC(kernel = 'linear', random_state = 0)
+classifier_second_pass = SVC(kernel = 'linear', random_state = 0)
 
 
 # Predicting the test set results
@@ -114,7 +114,9 @@ for i in range(len(Y_Pred_first_pass)):
             print("got 1 value")
             Y_Pred_first_pass[i] = 4
 
-print(give_error(Y_Pred_first_pass,Y_Test_saved))
+
+accuracy = give_error(Y_Pred_first_pass,Y_Test_saved)
+print("Accuracy on validation:" + str(accuracy*100))
 
 Y_Pred_first_pass_train = classifier.predict(X_Train)
 for i in range(len(Y_Pred_first_pass_train)):
@@ -124,8 +126,7 @@ for i in range(len(Y_Pred_first_pass_train)):
         Y_Pred_first_pass_train[i] = 2
         Y_Pred_second_pass_train = classifier_second_pass.predict(X_Train[i].reshape(1, -1))
         if (Y_Pred_second_pass_train == 1):
-            print("got 1 value train")
             Y_Pred_first_pass_train[i] = 4
 
-print(give_error(Y_Pred_first_pass_train,Y_Train_saved))
-# Making the Confusion Matrix
+accuracy = give_error(Y_Pred_first_pass_train,Y_Train_saved)
+print("Accuracy on training:" + str(accuracy*100))
