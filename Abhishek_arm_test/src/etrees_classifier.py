@@ -1,23 +1,8 @@
-# Kernel SVM
-# Importing the libraries
-
 import numpy as np
 import pandas as pd
 import sklearn
-import matplotlib.pyplot as plt
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn import tree
 
-def plot_coefficients(classifier, top_features=20):
- coef = classifier.coef_.ravel()
- top_positive_coefficients = np.argsort(coef)[-top_features:]
- top_negative_coefficients = np.argsort(coef)[:top_features]
- top_coefficients = np.hstack([top_negative_coefficients, top_positive_coefficients])
- # create plot
- plt.figure(figsize=(15, 5))
- colors = ['red' if c < 0 else 'blue' for c in coef[top_coefficients]]
- plt.bar(np.arange(2 * top_features), coef[top_coefficients], color=colors)
- plt.xticks(np.arange(1, 1 + 2 * top_features), top_coefficients, rotation=60, ha='right')
- plt.show()
 
 def give_error(y_out,class_probabilities, y, x):
     cnt = 0
@@ -86,26 +71,11 @@ y_total_test = np.array(y_total_test)
 X_test = x_total_1_test
 Y_test = y_total_test
 
-# Feature Scaling
-from sklearn.preprocessing import StandardScaler
-sc_X = StandardScaler()
-X = sc_X.fit_transform(X)
-X_test_transformed = sc_X.fit_transform(X_test)
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(X, Y)
 
-# Fitting the classifier into the Training set
-from sklearn.svm import SVC
-classifier = SVC(kernel = 'linear', random_state = 0, gamma = 'auto',probability=True)
-
-# Predicting the test set results
-classifier.fit(X,Y)
-
-# Y_pred_train = classifier.predict(X_Train)
-# print(give_error(Y_pred_train,Y_Train))
-#w = classifier.coef_
-#print('w = ',w)
-
-Y_Pred_first_pass = classifier.predict(X_test_transformed)
-class_probabilities = classifier.predict_proba(X_test_transformed)
+Y_Pred_first_pass = clf.predict(X_test)
+class_probabilities = clf.predict_proba(X_test)
 for i in range(len(Y_Pred_first_pass)):
     # if class_probabilities[i][1] > 0.6:
     #     Y_Pred_first_pass[i] = 1.0
@@ -130,6 +100,3 @@ for i in range(len(Y_Pred_first_pass)):
 
 accuracy = give_error(Y_Pred_first_pass,class_probabilities,Y_test, X_test)
 print("Accuracy:" + str(accuracy*100))
-
-plot_coefficients(classifier)
-
