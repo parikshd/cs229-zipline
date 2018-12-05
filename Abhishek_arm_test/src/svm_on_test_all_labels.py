@@ -30,10 +30,10 @@ def give_error(y_out,class_probabilities, y, x):
             print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
             print("%success=" + str(class_probabilities[i][0]*100) + " %mission-failure=" + str(class_probabilities[i][1]*100) + " %flight-failure=" + str(class_probabilities[i][2]*100))
             cntfalse += 1
-            if (y_out[i] == 2):
-                print("Flight " + str(int(x[i][flight_id_index])) + " might need maintaince, our algorithm predicted it would have mission failure!")
-            if (y_out[i] == 4):
-                print("Flight " + str(int(x[i][flight_id_index])) + " definitely needs maintaince, our algorithm predicted it would have flight failure!")
+            # if (y_out[i] == 2):
+            #     #print("Flight " + str(int(x[i][flight_id_index])) + " might need maintaince, our algorithm predicted it would have mission failure!")
+            # if (y_out[i] == 4):
+            #     #print("Flight " + str(int(x[i][flight_id_index])) + " definitely needs maintaince, our algorithm predicted it would have flight failure!")
     print("Predicted " + str(cnt) + "/" + str(len(y_out)) + " correctly.")
     print("Predicted " + str(cntfalse) + "/" + str(len(y_out)) + " incorrectly.")
     return cnt / len(y_out)
@@ -44,10 +44,29 @@ datasets_test = pd.read_csv('testinput/flights_new_till_03dec.csv')
 test_columns = datasets_test.columns
 train_columns = datasets.columns
 
+print(datasets.columns[128])
+print(datasets.columns[222])
+print(datasets.columns[189])
+print(datasets.columns[221])
+print("+ve:")
+print(datasets.columns[51])
+print(datasets.columns[219])
+print(datasets.columns[177])
+print(datasets.columns[245])
+
+
+df1 = pd.read_csv("../milestone_data.csv")
+cols = list(df1.columns.values)
+cols.remove('flight_controls.did_use_reverse_thrust')
+cols.remove('flight_file_timestamp')
+
 to_del_test_columns = np.setdiff1d(test_columns,train_columns)
 datasets_test.drop(to_del_test_columns, axis=1, inplace=True)
 
 datasets = datasets[datasets_test.columns]
+
+datasets = datasets[cols]
+datasets_test = datasets_test[cols]
 
 datasets['highest_failure_level.id'] = datasets['highest_failure_level.id'].astype(float)
 datasets_test['highest_failure_level.id'] = datasets_test['highest_failure_level.id'].astype(float)
@@ -55,7 +74,7 @@ datasets_test['highest_failure_level.id'] = datasets_test['highest_failure_level
 print("Model trained on " + str(datasets.shape[0]) + " flights with " + str(datasets.shape[1]) + " features")
 print("Runing tests on " + str(datasets_test.shape[0]) + " flights")
 
-flight_id_index = datasets_test.columns.get_loc("config.flight_id")
+#flight_id_index = datasets_test.columns.get_loc("config.flight_id")
 
 for idx, row in datasets.iterrows():
     if  datasets.loc[idx,'highest_failure_level.id'] == 1:
