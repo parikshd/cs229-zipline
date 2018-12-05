@@ -17,13 +17,50 @@ def add_intercept(x):
 
     return new_x
 
+def find_correlation(data, threshold=0.8, remove_negative=False):
+    """
+    Given a numeric pd.DataFrame, this will find highly correlated features,
+    and return a list of features to remove.
+    Parameters
+    -----------
+    data : pandas DataFrame
+        DataFrame
+    threshold : float
+        correlation threshold, will remove one of pairs of features with a
+        correlation greater than this value.
+    remove_negative: Boolean
+        If true then features which are highly negatively correlated will
+        also be returned for removal.
+    Returns
+    --------
+    select_flat : list
+        listof column names to be removed
+    """
+    corr_mat = data.corr()
+    if remove_negative:
+        corr_mat = np.abs(corr_mat)
+    corr_mat.loc[:, :] = np.tril(corr_mat, k=-1)
+    already_in = set()
+    result = []
+    for col in corr_mat:
+        perfect_corr = corr_mat[col][corr_mat[col] > threshold].index.tolist()
+        if perfect_corr and col not in already_in:
+            already_in.update(set(perfect_corr))
+            perfect_corr.append(col)
+            result.append(perfect_corr)
+    select_nested = [f[1:] for f in result]
+    select_flat = [i for j in select_nested for i in j]
+    return select_flat
+
 def load_dataset_new(train_path, test_data_path, train_label='highest_failure_level.id'):
 
     datasets = pd.read_csv(train_path)
     datasets_test = pd.read_csv(test_data_path)
 
-    test_columns = datasets_test.columns
+    remove_columns = find_correlation(datasets)
+    datasets.drop(remove_columns, axis=1, inplace=True)
     train_columns = datasets.columns
+    test_columns = datasets_test.columns
 
     to_del_test_columns = np.setdiff1d(test_columns, train_columns)
     datasets_test.drop(to_del_test_columns, axis=1, inplace=True)
