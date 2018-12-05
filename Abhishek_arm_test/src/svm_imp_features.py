@@ -1,8 +1,19 @@
+# Kernel SVM
+# Importing the libraries
+
 import numpy as np
 import pandas as pd
 import sklearn
-from sklearn import tree
+import matplotlib.pyplot as plt
+from sklearn.feature_extraction.text import CountVectorizer
 import util
+
+def f_importances(coef, names):
+    imp = coef
+    imp,names = zip(*sorted(zip(imp,names)))
+    plt.barh(range(len(names)), imp, align='center')
+    plt.yticks(range(len(names)), names)
+    plt.show()
 
 def give_error(y_out,class_probabilities, y, x):
     cnt = 0
@@ -15,24 +26,39 @@ def give_error(y_out,class_probabilities, y, x):
             print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
             print("%success=" + str(class_probabilities[i][0]*100) + " %mission-failure=" + str(class_probabilities[i][1]*100) + " %flight-failure=" + str(class_probabilities[i][2]*100))
             cntfalse += 1
-            if (y_out[i] == 2):
-                print("Flight " + str(int(x[i][flight_id_index])) + " might need maintaince, our algorithm predicted it would have mission failure!")
-            if (y_out[i] == 4):
-                print("Flight " + str(int(x[i][flight_id_index])) + " definitely needs maintaince, our algorithm predicted it would have flight failure!")
+            # if (y_out[i] == 2):
+            #     #print("Flight " + str(int(x[i][flight_id_index])) + " might need maintaince, our algorithm predicted it would have mission failure!")
+            # if (y_out[i] == 4):
+            #     #print("Flight " + str(int(x[i][flight_id_index])) + " definitely needs maintaince, our algorithm predicted it would have flight failure!")
     print("Predicted " + str(cnt) + "/" + str(len(y_out)) + " correctly.")
     print("Predicted " + str(cntfalse) + "/" + str(len(y_out)) + " incorrectly.")
     return cnt / len(y_out)
-
 
 train_path = "output/flights_pass_1_na_0.csv"
 eval_path = "testinput/flights_new_till_03dec.csv"
 X, Y,X_test,Y_test,dataset = util.load_dataset_new(train_path,eval_path)
 
-clf = tree.DecisionTreeClassifier()
-clf = clf.fit(X, Y)
+feature_names = dataset.columns
+# Feature Scaling
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X = sc_X.fit_transform(X)
+X_test_transformed = sc_X.fit_transform(X_test)
 
-Y_Pred_first_pass = clf.predict(X_test)
-class_probabilities = clf.predict_proba(X_test)
+# Fitting the classifier into the Training set
+from sklearn.svm import SVC
+classifier = SVC(kernel = 'linear', random_state = 0, gamma = 'auto',probability=True)
+
+# Predicting the test set results
+classifier.fit(X,Y)
+f_importances(classifier.coef_, feature_names)
+# Y_pred_train = classifier.predict(X_Train)
+# print(give_error(Y_pred_train,Y_Train))
+#w = classifier.coef_
+#print('w = ',w)
+
+Y_Pred_first_pass = classifier.predict(X_test_transformed)
+class_probabilities = classifier.predict_proba(X_test_transformed)
 for i in range(len(Y_Pred_first_pass)):
     # if class_probabilities[i][1] > 0.6:
     #     Y_Pred_first_pass[i] = 1.0
