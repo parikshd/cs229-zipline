@@ -29,6 +29,9 @@ train_path = "output/flights_pass_1_na_0.csv"
 eval_path = "testinput/flights_new_till_03dec.csv"
 X, Y,X_test,Y_test,dataset = util.load_dataset_new(train_path,eval_path)
 
+with open('featues_new.txt', 'w') as f:
+    for item in dataset.columns:
+        f.write("%s\n" % item)
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()

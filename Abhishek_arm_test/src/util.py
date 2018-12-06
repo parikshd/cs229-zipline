@@ -64,6 +64,10 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
 
     remove_columns = find_correlation(datasets)
     datasets.drop(remove_columns, axis=1, inplace=True)
+
+#    features = [line.rstrip('\n') for line in open('remove_features.txt')]
+
+#    datasets.drop(features, axis=1, inplace=True)
     train_columns = datasets.columns
     test_columns = datasets_test.columns
 
@@ -75,7 +79,7 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
     print("Model trained on " + str(datasets.shape[0]) + " flights with " + str(datasets.shape[1]) + " features")
     print("Ruuning tests on " + str(datasets_test.shape[0]) + " flights")
 
-    flight_id_index = datasets_test.columns.get_loc("config.flight_id")
+    #flight_id_index = datasets_test.columns.get_loc("config.flight_id")
 
     for idx, row in datasets.iterrows():
         if datasets.loc[idx, 'highest_failure_level.id'] == 1:
