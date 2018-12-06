@@ -40,7 +40,7 @@ X_test_transformed = sc_X.fit_transform(X_test)
 
 # Fitting the classifier into the Training set
 from sklearn.svm import SVC
-classifier = SVC(kernel = 'rbf', random_state = 0, gamma = 'auto',probability=True)
+classifier = SVC(kernel = 'linear', random_state = 0, gamma = 'auto',probability=True)
 
 # Predicting the test set results
 classifier.fit(X,Y)
@@ -53,10 +53,12 @@ classifier.fit(X,Y)
 Y_Pred_first_pass = classifier.predict(X_test_transformed)
 class_probabilities = classifier.predict_proba(X_test_transformed)
 for i in range(len(Y_Pred_first_pass)):
-    # if class_probabilities[i][1] > 0.6:
-    #     Y_Pred_first_pass[i] = 1.0
-    # elif class_probabilities[i][2] > 0.6:
-    #     Y_Pred_first_pass[i] = 2.0
+    if class_probabilities[i][0] > 0.6:
+        Y_Pred_first_pass[i] = 0.0
+    if class_probabilities[i][1] > 0.6:
+        Y_Pred_first_pass[i] = 1.0
+    elif class_probabilities[i][2] > 0.6:
+        Y_Pred_first_pass[i] = 2.0
 
     if class_probabilities[i][1] > class_probabilities[i][0]:
         Y_Pred_first_pass[i] = 1.0

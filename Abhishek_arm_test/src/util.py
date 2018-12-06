@@ -65,9 +65,9 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
     remove_columns = find_correlation(datasets)
     datasets.drop(remove_columns, axis=1, inplace=True)
 
-#    features = [line.rstrip('\n') for line in open('remove_features.txt')]
+    features = [line.rstrip('\n') for line in open('remove_features.txt')]
+    datasets.drop(features, axis=1, inplace=True)
 
-#    datasets.drop(features, axis=1, inplace=True)
     train_columns = datasets.columns
     test_columns = datasets_test.columns
 
