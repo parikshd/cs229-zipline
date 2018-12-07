@@ -17,7 +17,7 @@ def add_intercept(x):
 
     return new_x
 
-def find_correlation(data, threshold=0.8, remove_negative=False):
+def find_correlation(data, train_label, input_threshold=0.8, output_threshold= 1e-2, remove_negative=False):
     """
     Given a numeric pd.DataFrame, this will find highly correlated features,
     and return a list of features to remove.
@@ -36,26 +36,45 @@ def find_correlation(data, threshold=0.8, remove_negative=False):
     select_flat : list
         listof column names to be removed
     """
-    corr_mat = data.corr()
-    if remove_negative:
-        corr_mat = np.abs(corr_mat)
-    corr_mat.loc[:, :] = np.tril(corr_mat, k=-1)
-    already_in = set()
-    result = []
-    for col in corr_mat:
-        perfect_corr = corr_mat[col][corr_mat[col] > threshold].index.tolist()
-        if perfect_corr and col not in already_in:
-            already_in.update(set(perfect_corr))
-            perfect_corr.append(col)
-            result.append(perfect_corr)
-    select_nested = [f[1:] for f in result]
-    select_flat = [i for j in select_nested for i in j]
-    return select_flat
+    #corr_mat = data.corr()
+    #if remove_negative:
+    #    corr_mat = np.abs(corr_mat)
+    #corr_mat.loc[:, :] = np.tril(corr_mat, k=-1)
+    #already_in = set()
+    #result = []
+    #for col in corr_mat:
+    #    perfect_corr = corr_mat[col][corr_mat[col] > input_threshold].index.tolist()
+    #    if perfect_corr and col not in already_in:
+    #        already_in.update(set(perfect_corr))
+    #        perfect_corr.append(col)
+    #        result.append(perfect_corr)
+    #select_nested = [f[1:] for f in result]
+    #select_flat = [i for j in select_nested for i in j]
+
+    corr_mat = data.corr().abs()
+    drop_list = []
+    upper = corr_mat.where(np.triu(np.ones(corr_mat.shape), k=1).astype(np.bool))
+    to_drop = [column for column in upper.columns if any(upper[column] > input_threshold)]
+
+    for i in range(len(to_drop)):
+        drop_list.append(data.columns[data.columns.get_loc(to_drop[i])])
+
+    for key in corr_mat.keys():
+        if abs(corr_mat[key][train_label])<=output_threshold:
+            if key not in drop_list: drop_list.append(key)
+
+    print("Dropping", drop_list)
+    return drop_list
 
 def load_dataset_new(train_path, test_data_path, train_label='highest_failure_level.id'):
 
     datasets = pd.read_csv(train_path)
     datasets_test = pd.read_csv(test_data_path)
+
+    #Dropping all zeros and Same values in all cols
+    nunique = datasets.apply(pd.Series.nunique)
+    cols_to_drop = nunique[nunique == 1].index
+    datasets.drop(cols_to_drop, axis=1, inplace=True)
 
     y_label = datasets[train_label]
     datasets.drop(['highest_failure_level.id'], axis=1, inplace=True)
@@ -65,11 +84,12 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
     datasets_test.drop(['highest_failure_level.id'], axis=1, inplace=True)
     datasets_test[train_label] = y_label_test
 
-    remove_columns = find_correlation(datasets)
+    remove_columns = find_correlation(datasets, train_label)
     datasets.drop(remove_columns, axis=1, inplace=True)
 
     features = [line.rstrip('\n') for line in open('remove_features.txt')]
     datasets.drop(features, axis=1, inplace=True)
+
 
     train_columns = datasets.columns
     test_columns = datasets_test.columns
@@ -87,16 +107,18 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
     for idx, row in datasets.iterrows():
         if datasets.loc[idx, 'highest_failure_level.id'] == 1:
             datasets.loc[idx, 'highest_failure_level.id'] = 0
-        if datasets.loc[idx, 'highest_failure_level.id'] == 2:
+        elif datasets.loc[idx, 'highest_failure_level.id'] == 2:
             datasets.loc[idx, 'highest_failure_level.id'] = 1
-        if datasets.loc[idx, 'highest_failure_level.id'] == 4:
+        elif datasets.loc[idx, 'highest_failure_level.id'] == 4:
             datasets.loc[idx, 'highest_failure_level.id'] = 2
+
 
     x_y_total = datasets
     y_total = x_y_total['highest_failure_level.id']
     del x_y_total['highest_failure_level.id']
 
     x_total_1 = np.array(x_y_total)
+    all_zeros = np.where(~x_total_1.any(axis=0))[0]
     y_total = np.array(y_total)
 
     X = x_total_1
