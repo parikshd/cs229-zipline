@@ -17,7 +17,7 @@ def add_intercept(x):
 
     return new_x
 
-def find_correlation(data, train_label, input_threshold=0.8, output_threshold= 1e-2, remove_negative=False):
+def find_correlation(data, train_label, input_threshold=0.9, output_threshold= 1e-2, remove_negative=False):
     """
     Given a numeric pd.DataFrame, this will find highly correlated features,
     and return a list of features to remove.
@@ -112,13 +112,6 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
         elif datasets.loc[idx, 'highest_failure_level.id'] == 4:
             datasets.loc[idx, 'highest_failure_level.id'] = 2
 
-    for idx, row in datasets_test.iterrows():
-        if datasets_test.loc[idx, 'highest_failure_level.id'] == 1:
-            datasets_test.loc[idx, 'highest_failure_level.id'] = 0
-        elif datasets_test.loc[idx, 'highest_failure_level.id'] == 2:
-            datasets_test.loc[idx, 'highest_failure_level.id'] = 1
-        elif datasets_test.loc[idx, 'highest_failure_level.id'] == 4:
-            datasets_test.loc[idx, 'highest_failure_level.id'] = 2
 
     x_y_total = datasets
     y_total = x_y_total['highest_failure_level.id']
