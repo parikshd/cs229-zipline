@@ -112,6 +112,13 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
         elif datasets.loc[idx, 'highest_failure_level.id'] == 4:
             datasets.loc[idx, 'highest_failure_level.id'] = 2
 
+    for idx, row in datasets_test.iterrows():
+        if datasets_test.loc[idx, 'highest_failure_level.id'] == 1:
+            datasets_test.loc[idx, 'highest_failure_level.id'] = 0
+        elif datasets_test.loc[idx, 'highest_failure_level.id'] == 2:
+            datasets_test.loc[idx, 'highest_failure_level.id'] = 1
+        elif datasets_test.loc[idx, 'highest_failure_level.id'] == 4:
+            datasets_test.loc[idx, 'highest_failure_level.id'] = 2
 
     x_y_total = datasets
     y_total = x_y_total['highest_failure_level.id']
