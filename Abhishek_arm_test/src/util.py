@@ -55,17 +55,15 @@ def find_correlation(data, threshold=0.8, remove_negative=False):
 def load_dataset_new(train_path, test_data_path, train_label='highest_failure_level.id'):
 
     datasets = pd.read_csv(train_path)
-    datasets_req = pd.read_csv(train_path)
     datasets_test = pd.read_csv(test_data_path)
 
     y_label = datasets[train_label]
-    # print(drop_list)
     datasets.drop(['highest_failure_level.id'], axis=1, inplace=True)
     datasets[train_label] = y_label
 
-    # print(datasets.columns[117])
-    # print(datasets.columns[633])
-    # print(datasets.columns[115])
+    y_label_test = datasets_test[train_label]
+    datasets_test.drop(['highest_failure_level.id'], axis=1, inplace=True)
+    datasets_test[train_label] = y_label_test
 
     remove_columns = find_correlation(datasets)
     datasets.drop(remove_columns, axis=1, inplace=True)
