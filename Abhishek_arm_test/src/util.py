@@ -17,7 +17,7 @@ def add_intercept(x):
 
     return new_x
 
-def find_correlation(data, train_label, input_threshold=0.9, output_threshold= 1e-2, remove_negative=False):
+def find_correlation(data, train_label, input_threshold=0.9, output_threshold= 1.65e-1, remove_negative=False):
     """
     Given a numeric pd.DataFrame, this will find highly correlated features,
     and return a list of features to remove.
@@ -71,6 +71,9 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
     datasets = pd.read_csv(train_path)
     datasets_test = pd.read_csv(test_data_path)
 
+    features = [line.rstrip('\n') for line in open('remove_features.txt')]
+    datasets.drop(features, axis=1, inplace=True)
+
     #Dropping all zeros and Same values in all cols
     nunique = datasets.apply(pd.Series.nunique)
     cols_to_drop = nunique[nunique == 1].index
@@ -87,11 +90,10 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
     remove_columns = find_correlation(datasets, train_label)
     datasets.drop(remove_columns, axis=1, inplace=True)
 
-    features = [line.rstrip('\n') for line in open('remove_features.txt')]
-    datasets.drop(features, axis=1, inplace=True)
 
 
     train_columns = datasets.columns
+    print(train_columns)
     test_columns = datasets_test.columns
 
     to_del_test_columns = np.setdiff1d(test_columns, train_columns)
