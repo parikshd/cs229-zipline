@@ -58,6 +58,11 @@ def load_dataset_new(train_path, test_data_path, train_label='highest_failure_le
     datasets_req = pd.read_csv(train_path)
     datasets_test = pd.read_csv(test_data_path)
 
+    y_label = datasets[train_label]
+    # print(drop_list)
+    datasets.drop(['highest_failure_level.id'], axis=1, inplace=True)
+    datasets[train_label] = y_label
+
     # print(datasets.columns[117])
     # print(datasets.columns[633])
     # print(datasets.columns[115])
