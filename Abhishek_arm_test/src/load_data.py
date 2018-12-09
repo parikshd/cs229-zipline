@@ -1,18 +1,17 @@
 import json
 from pandas.io.json import json_normalize
 import pandas as pd
-with open('../all_logs/flights0_1500.json') as f:
-    data_1 = json.load(f)
 
-with open('../all_logs/flights1500_3000.json') as f:
-    data_2 = json.load(f)
+df_1 = pd.read_csv("testinput/flights_new_till_03dec.csv", low_memory=False)
+print(df_1.shape)
 
-data_df1 = json_normalize(data_1['flights'])
-print(data_df1.shape)
-data_df2 = json_normalize(data_2['flights'])
-print(data_df2.shape)
+df_2 = pd.read_csv("testinput/flights_03dec_08_dec.csv", low_memory=False)
+print(df_2.shape)
 
-combined_df = pd.concat([data_df1, data_df2])
+df_3 = pd.read_csv("testinput/flights_failed.csv", low_memory=False)
+print(df_3.shape)
+
+combined_df = pd.concat([df_1, df_2,df_3])
 print(combined_df.shape)
 
-combined_df.to_csv('output/flights_raw.csv', encoding='utf-8', index=False)
+combined_df.to_csv('testinput/all_test_with_failures.csv', encoding='utf-8', index=False)

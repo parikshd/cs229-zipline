@@ -17,7 +17,7 @@ def add_intercept(x):
 
     return new_x
 
-def find_correlation(data, train_label, input_threshold=0.9, output_threshold= 1.65e-1, remove_negative=False):
+def find_correlation(data, train_label, input_threshold=0.75, output_threshold= 1.80e-1, remove_negative=False):
     """
     Given a numeric pd.DataFrame, this will find highly correlated features,
     and return a list of features to remove.

@@ -8,13 +8,20 @@ s3 = boto3.resource('s3')
 
 BUCKET_NAME = 'nest-1-ap-south-1'
 
-currentDay = datetime.now().strftime('%d')
-currentMonth = datetime.now().strftime('%m')
-currentYear = datetime.now().strftime('%Y')
+# currentDay = datetime.now().strftime('%d')
+# currentMonth = datetime.now().strftime('%m')
+# currentYear = datetime.now().strftime('%Y')
+
+currentDay = '08'
+currentMonth = '12'
+currentYear = '2018'
 
 outputfolder = str(currentDay)+str(currentMonth)+str(currentYear)
-os.mkdir('testinput/' + outputfolder)
 prefix = 'flight_logs/' + str(currentDay) + '/' + str(currentMonth) + '/' + str(currentYear) + '/'
+
+import os
+if not os.path.exists('testinput/' + outputfolder):
+    os.mkdir('testinput/' + outputfolder)
 
 client = boto3.client('s3')
 result = client.list_objects(Bucket=BUCKET_NAME, Prefix=prefix, Delimiter='/')

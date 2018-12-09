@@ -3,7 +3,7 @@ import numpy as np
 import json
 from pandas.io.json import json_normalize
 
-with open('../all_logs/flights_new_till_03dec.json') as f:
+with open('testinput/flight_failure/flight_failed.json') as f:
     data_1 = json.load(f)
 
 data_df1 = json_normalize(data_1['flights'])
@@ -20,4 +20,4 @@ print("dropped string fields")
 print(df_all.shape)
 
 df_all.fillna(0, inplace=True)
-df_all.to_csv('testinput/flights_new_till_03dec.csv', encoding='utf-8', index=False)
+df_all.to_csv('testinput/flights_failed.csv', encoding='utf-8', index=False)

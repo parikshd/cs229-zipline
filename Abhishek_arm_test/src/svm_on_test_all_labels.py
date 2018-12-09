@@ -14,8 +14,9 @@ def give_error(y_out,class_probabilities, y, x):
             #print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
             cnt += 1
         else:
-            print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
-            print("%success=" + str(class_probabilities[i][0]*100) + " %mission-failure=" + str(class_probabilities[i][1]*100) + " %flight-failure=" + str(class_probabilities[i][2]*100))
+            if ~(y_out[i] == 1 and y[i] == 2.0):
+                print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
+                print("%success=" + str(class_probabilities[i][0]*100) + " %mission-failure=" + str(class_probabilities[i][1]*100) + " %flight-failure=" + str(class_probabilities[i][2]*100))
             cntfalse += 1
             # if (y_out[i] == 2):
             #     #print("Flight " + str(int(x[i][flight_id_index])) + " might need maintaince, our algorithm predicted it would have mission failure!")
@@ -26,7 +27,8 @@ def give_error(y_out,class_probabilities, y, x):
     return cnt / len(y_out)
 
 train_path = "output/flights_pass_1_na_0.csv"
-eval_path = "output/flights_new_till_03dec.csv"
+#eval_path = "output/flights_pass_1_na_0.csv"
+eval_path = "testinput/all_test_with_failures_clean.csv"
 X, Y,X_test,Y_test,dataset = util.load_dataset_new(train_path,eval_path)
 
 with open('featues_new.txt', 'w') as f:
@@ -53,16 +55,19 @@ classifier.fit(X,Y)
 Y_Pred_first_pass = classifier.predict(X_test_transformed)
 class_probabilities = classifier.predict_proba(X_test_transformed)
 for i in range(len(Y_Pred_first_pass)):
-    if class_probabilities[i][0] >= 0.7:
-        Y_Pred_first_pass[i] = 0.0
-    if class_probabilities[i][1] >= 0.3:
-        Y_Pred_first_pass[i] = 1.0
-    elif class_probabilities[i][2] >= 0.2:
-        Y_Pred_first_pass[i] = 2.0
-
     if class_probabilities[i][1] > class_probabilities[i][0]:
         Y_Pred_first_pass[i] = 1.0
-    if (class_probabilities[i][2] > class_probabilities[i][1]) and (class_probabilities[i][2] > class_probabilities[i][0]):
+    else:
+        Y_Pred_first_pass[i] = 0.0
+    if (class_probabilities[i][2] > class_probabilities[i][1]) and (
+            class_probabilities[i][2] > class_probabilities[i][0]):
+        Y_Pred_first_pass[i] = 2.0
+
+    if class_probabilities[i][0] >= 0.8:
+        Y_Pred_first_pass[i] = 0.0
+    if class_probabilities[i][1] >= 0.2:
+        Y_Pred_first_pass[i] = 1.0
+    if class_probabilities[i][2] >= 0.2:
         Y_Pred_first_pass[i] = 2.0
 
     if Y_Pred_first_pass[i] == 0.0:
