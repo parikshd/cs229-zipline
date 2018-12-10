@@ -9,22 +9,32 @@ import util
 def give_error(y_out,class_probabilities, y, x):
     cnt = 0
     cntfalse = 0
+    cntBadones = 0
+    cntActualTwos = 0
     for i in range(len(y_out)):
+        if (y_out[i] == 1.0 and y[i] == 2.0):
+            cntBadones += 1
+        if (y[i] == 2.0):
+            cntActualTwos += 1
         if (y_out[i] == y[i]):
             #print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
             cnt += 1
         else:
-            if ~(y_out[i] == 1 and y[i] == 2.0):
+            if (y_out[i] != 1.0):
                 print("Predicted:" + str(y_out[i]) + ",actual:" + str(y[i]))
                 print("%success=" + str(class_probabilities[i][0]*100) + " %mission-failure=" + str(class_probabilities[i][1]*100) + " %flight-failure=" + str(class_probabilities[i][2]*100))
             cntfalse += 1
-            # if (y_out[i] == 2):
+
             #     #print("Flight " + str(int(x[i][flight_id_index])) + " might need maintaince, our algorithm predicted it would have mission failure!")
             # if (y_out[i] == 4):
             #     #print("Flight " + str(int(x[i][flight_id_index])) + " definitely needs maintaince, our algorithm predicted it would have flight failure!")
-    print("Predicted " + str(cnt) + "/" + str(len(y_out)) + " correctly.")
+    print("Predicted " + str((len(y_out) - cntBadones)) + "/" + str(len(y_out)) + " correctly.")
     print("Predicted " + str(cntfalse) + "/" + str(len(y_out)) + " incorrectly.")
-    return cnt / len(y_out)
+    print("Predicted " + str(cntBadones) + "/" + str(cntActualTwos) + " incorrectly. ==> predicted 1, actual 2")
+    model_failure = (cntActualTwos - cntBadones)/ cntActualTwos
+    total_failure = cnt /len(y_out)
+
+    return total_failure,model_failure
 
 train_path = "output/flights_pass_1_na_0.csv"
 #eval_path = "output/flights_pass_1_na_0.csv"
@@ -39,7 +49,6 @@ from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X = sc_X.fit_transform(X)
 X_test_transformed = sc_X.fit_transform(X_test)
-
 # Fitting the classifier into the Training set
 from sklearn.svm import SVC
 classifier = SVC(kernel = 'rbf', random_state = 0, gamma = 'auto',probability=True)
@@ -63,11 +72,11 @@ for i in range(len(Y_Pred_first_pass)):
             class_probabilities[i][2] > class_probabilities[i][0]):
         Y_Pred_first_pass[i] = 2.0
 
-    if class_probabilities[i][0] >= 0.8:
+    if class_probabilities[i][0] >= 0.85:
         Y_Pred_first_pass[i] = 0.0
-    if class_probabilities[i][1] >= 0.2:
+    if class_probabilities[i][1] >= 0.15:
         Y_Pred_first_pass[i] = 1.0
-    if class_probabilities[i][2] >= 0.2:
+    if class_probabilities[i][2] >= 0.15:
         Y_Pred_first_pass[i] = 2.0
 
     if Y_Pred_first_pass[i] == 0.0:
@@ -81,8 +90,8 @@ for i in range(len(Y_Pred_first_pass)):
     print(Y_Pred_first_pass[i])
     print(class_probabilities[i])
 
-accuracy = give_error(Y_Pred_first_pass,class_probabilities,Y_test, X_test)
-print("Accuracy:" + str(accuracy*100))
-
+total_accuracy,model_accuracy = give_error(Y_Pred_first_pass,class_probabilities,Y_test, X_test)
+print("Total accuracy:" + str(total_accuracy*100))
+print("Model accuracy:" + str(model_accuracy*100))
 
 
