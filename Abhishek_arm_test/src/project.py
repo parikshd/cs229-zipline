@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from pandas.plotting import scatter_matrix
+import util
+from sklearn.preprocessing import StandardScaler
 
 
 def add_intercept(x):
@@ -46,115 +48,19 @@ def clean_dataset(file1):
 
 def main(file1):
     print("Running main")
-    # Load 2 files
-    #clean_dataset(file1)
-    #x_data1, y_data = load_dataset(file1, label_present=True)
+    train_path = "output/flights_pass_1_na_0.csv"
+    eval_path = "testinput/all_test_with_failures_clean.csv"
+    #X, Y, X_test, Y_test, dataset = util.load_dataset_new(train_path, eval_path)
+    x_train_org, y_train, x_valid_org, y_valid, dataset = util.load_dataset_new(train_path, eval_path)
 
-    #print(y_data)
+    sc_X = StandardScaler()
+    x_train = util.add_intercept(sc_X.fit_transform(x_train_org))
+    x_valid = util.add_intercept(sc_X.fit_transform(x_valid_org))
 
-    #Part3
-#     m,n = x_data1.shape
-#     test_x = []
-#     test_y = []
-#     test_missing_x = []
-#     test_missing_y = []
-#     for k in range(len(x_data1)):
-#         cnt = 0
-#         for l in range(len(x_data1[k])):
-#             if x_data1.item(k, l) != "":
-#                 cnt +=1
-#         if cnt == n:
-#             test_x.append(x_data1[k])
-#             test_y.append(y_data[k])
-#         else:
-#             test_missing_x.append(x_data1[k])
-#             test_missing_y.append(y_data[k])
-#
-#     test_x = np.array(test_x)
-#     test_y = np.array(test_y)
-#     test_missing_x = np.array(test_missing_x)
-#     test_missing_y = np.array(test_missing_y)
-#     all = np.column_stack((test_missing_x, test_missing_y))
-#     part3_path = 'output/flight3.txt'
-#     with open(part3_path, 'w') as f:
-#         for item in all:
-#             inter = ",".join("{0}".format(i) for i in item)
-#             f.write("%s\n" % inter)
-#     #Part5
-# #    data = pd.read_csv(part3_path)
-#     data_new = pd.concat([x_data1, y_data], axis=1)
-
-    # data_eigen = np.array(data_new)
-    # data_update_eigen_mean = (data_eigen - data_eigen.mean(axis=0))
-    # data_update_max_min_eigen = np.max(data_eigen, axis=0) - np.min(data_eigen, axis=0)
-    # for i in range(len(data_update_max_min_eigen)):
-    #     for j in range(data_eigen.shape[0]):
-    #         data_eigen[j,i] = data_update_eigen_mean[j,i] / data_update_max_min_eigen[i]
-    #
-    # data_new = pd.concat([data_new, y_data], axis=1)
-    #corr = data_new.corr()
-    ##corr_eigen = data_update_eigen.corr()
-    #corr_eigen = np.cov(data_eigen.T)
-    #eig_vals, eig_vecs = np.linalg.eig(corr_eigen)
-    #print('Eigenvectors \n%s' % eig_vecs)
-    #print('\nEigenvalues \n%s' % eig_vals)
-    #print('\nEigenvalues sum \n%s' % sum(eig_vals))
-    #print(eig_vals)
-    #tot = sum(eig_vals)
-    #print(tot)
-    ##var_exp = [(i / tot) * 100 for i in sorted(eig_vals, reverse=False)]
-    #var_exp = [(i / tot) * 100 for i in eig_vals]
-    #cum_var_exp = np.cumsum(var_exp)
-    #print(data_update.keys())
-    #print(var_exp)
-
-    ###Correlation Matrix
-
-    df1 = pd.read_csv(file1)
-    data_new = df1.dropna()
-    data_dummies = pd.get_dummies(data_new['recovery.compass_heading'])
-    data_new = pd.concat([data_new, data_dummies], axis=1)
-    del data_new['recovery.compass_heading']
-
-
-
-    corr_path = 'output/corr.csv'
-    # Create correlation matrix
-    corr_matrix = data_new.corr().abs()
-    # Select upper triangle of correlation matrix
-    upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(np.bool))
-    # Find index of feature columns with correlation greater than 0.8
-    to_drop = [column for column in upper.columns if any(upper[column] > 0.8)]
-    #print(to_drop)
-
-    drop_list = []
-    for i in range(len(to_drop)):
-        #print(to_drop[i])
-        drop_list.append(data_new.columns.get_loc(to_drop[i]))
-
-    #print(drop_list)
-    data_new.drop(data_new.columns[drop_list], axis=1,inplace=True)
-    print(data_new.shape)
-    corr_after_dropping = data_new.corr()
-
-    keys_to_drop=[]
-    for key in corr_after_dropping.keys():
-        if abs(corr_after_dropping[key]['highest_failure_level.id'])<=1e-2:
-            keys_to_drop.append(key)
-    #print(keys_to_drop)
-    drop_list_new = []
-    for i in range(len(keys_to_drop)):
-        # print(to_drop[i])
-        drop_list_new.append(data_new.columns.get_loc(keys_to_drop[i]))
-    data_new.drop(data_new.columns[drop_list_new], axis=1, inplace=True)
-    corr_after_dropping_all = data_new.corr()
-
-    corr_after_dropping.to_csv(corr_path + "_after_dropping_all")
-    ##print(corr)
-    plot_path = 'output/corrflight_new_after_dropping_all'
-    plt.matshow(corr_after_dropping)
-    labels = corr_after_dropping.columns.values
     ###plot correlation matrix
+    corr_after_dropping = dataset.corr()
+    labels = corr_after_dropping.columns.values
+    plt.matshow(corr_after_dropping)
     fig = plt.figure()
     ax = fig.add_subplot(111)
     cax = ax.matshow(corr_after_dropping, vmin=-1, vmax=1)
@@ -162,35 +68,18 @@ def main(file1):
     ticks = np.arange(0, len(corr_after_dropping.columns), 1)
     ax.set_xticks(ticks)
     ax.set_yticks(ticks)
-    ax.set_xticklabels(labels, size=5)
-    ax.set_yticklabels(labels)
+    #ax.set_xticklabels(labels, size=1)
+    ax.set_yticklabels(labels, size=5)
+    plot_path = 'output/correlation_plot'
     plt.savefig(plot_path)
+
     ##Scatter
-    #headers = list(data_new.columns.values)
-    #scatter = pd.DataFrame(data_new, columns=headers)
+    #headers = list(dataset.columns.values)
+    ##scatter = pd.DataFrame(dataset, columns=headers)
+    #scatter = pd.DataFrame(dataset)
     #my_scatter = scatter_matrix(scatter)
-    #plt.savefig(r"output/flightscatter")
+    #plt.savefig("output/flightscatter")
 
-    #exit(1)
-    def shuffle(matrix, target, test_proportion):
-        ratio = int(matrix.shape[0] / test_proportion)
-        X_train = matrix[ratio:, :]
-        X_test = matrix[:ratio, :]
-        Y_train = target[ratio:]
-        Y_test = target[:ratio]
-        return X_train, X_test, Y_train, Y_test
-
-
-
-    data_new_1 = data_new.sample(frac=1)
-    ##data_new_1.to_csv('milestone_data.csv')
-
-    data_new_1 = pd.read_csv("milestone_data.csv")
-    x_y_total = data_new_1
-    y_total = x_y_total['highest_failure_level.id']
-    del x_y_total['highest_failure_level.id']
-    # *** START CODE HERE ***
-    ##deleteing some features
     def give_error(y_out, y):
         cnt = 0
         for i in range(len(y_out)):
@@ -198,20 +87,6 @@ def main(file1):
                 cnt +=1
         return cnt/len(y_out)
 
-    x_total_1 = np.array(x_y_total)
-    y_total = np.array(y_total)
-
-    ##Normalize data
-    x_mean = np.mean(x_total_1, axis=0)
-    x_max = np.max(x_total_1, axis=0)
-    x_min = np.min(x_total_1, axis=0)
-    #x_std = np.std(x_total_1, axis=0)
-    x_total = (x_total_1 - x_mean)/(x_max - x_min)
-    #x_total = (x_total_1 - x_mean)/x_std
-    x_total = add_intercept(x_total)
-
-    x_train, x_valid, y_train, y_valid = shuffle(x_total, y_total, 5)
-    m,n = x_total.shape
     ##Normal Eq
     tau = 0.1
     lwr = LinearReg_normal_eq_locally_weighted(tau)
@@ -232,17 +107,13 @@ def main(file1):
     #print(y_valid_out_ne)
     ##print(y_valid)
     ##LWR
-    tau_array = np.array([10])
-    r2_valid_lwr = 0
-    for i in range(0, len(tau_array)):
-        lwr.tau = tau_array[i]
-        y_valid_out_lwr = lwr.predict(x_valid)
-        y_valid_out_lwr_1 = np.where(y_valid_out_lwr > 0.65, 1, 0)
-        print(give_error(y_valid_out_lwr_1, y_valid))
-
-    ##print('r2_train_normal_equation = ', r2_train_ne)
-    ##print('r2_valid_normal_equation =', r2_valid_ne)
-    ##print('r2_valid_locally_weighted = ', r2_valid_lwr, 'tau = ', lwr.tau)
+    ###tau_array = np.array([10])
+    ###r2_valid_lwr = 0
+    ###for i in range(0, len(tau_array)):
+    ###    lwr.tau = tau_array[i]
+    ###    y_valid_out_lwr = lwr.predict(x_valid)
+    ###    y_valid_out_lwr_1 = np.where(y_valid_out_lwr > 0.65, 1, 0)
+    ###    print(give_error(y_valid_out_lwr_1, y_valid))
 
     ##Gradient descent
     linear_reg = LinearRegression_gradient_descent()
@@ -250,9 +121,9 @@ def main(file1):
     linear_reg.y_train = y_train
     l1_l2_factor = np.array([1,2])
     ##learning_rate = 4.85e-5
-    lambda_array = np.array([1000, 1])
-    learning_rate = 0.1
-    cost_limit = 1e-8
+    lambda_array = np.array([10, 0.5])
+    learning_rate = 1e-5
+    cost_limit = 1e-12
     r2_train_gd = 0
     r2_valid_gd = 0
     for i in range(0, len(l1_l2_factor)):
@@ -262,8 +133,8 @@ def main(file1):
         y_train_out = linear_reg.predict(x_train)
         y_valid_out = linear_reg.predict(x_valid)
 
-        y_train_out_1 = np.where(y_train_out > 0.65, 1, 0)
-        y_valid_out_1 = np.where(y_valid_out > 0.65, 1, 0)
+        y_train_out_1 = np.where(y_train_out > 0.6, 1, 0)
+        y_valid_out_1 = np.where(y_valid_out > 0.6, 1, 0)
 
         print(give_error(y_valid_out_1, y_valid))
         print(give_error(y_train_out_1, y_train))
@@ -305,6 +176,7 @@ class LinearRegression_gradient_descent(object):
         J_delta = J
         J_save = J
         m = x.shape[0]
+        J_arr = []
         while J_delta >= cost_limit:
             iteration += 1
             theta_save = self.theta
@@ -320,13 +192,19 @@ class LinearRegression_gradient_descent(object):
             delta = np.linalg.norm(np.subtract(theta_new,self.theta), 1)
             self.theta = theta_new
             J_new = self.costfunction(x, y, self.theta)
+            J_arr.append(J_new)
             J_delta = J - J_new
             J = J_new
             if (J_delta < 0):
                 J = J_save
                 self.theta = theta_save
-
         #print(J_delta, np.sum(J), iteration)
+        #print(J_arr)
+        ##plt.plot(J_arr);
+        ##plt.xlabel('Iterations');
+        ##plt.ylabel('Cost Function');
+        ##plt.show()
+
         return self.theta
 
     def predict(self, x):
@@ -385,7 +263,7 @@ class LinearReg_normal_eq_locally_weighted(object):
                 wi = np.concatenate(([wi], [wi_int]), axis=None)
             W = np.diag(wi/2)
             theta_new = self.normal_eq_theta_lwr(self.x_train, W, self.y_train)
-            y_new = np.int_(np.rint(np.dot(x[k], theta_new)))
+            y_new = np.dot(x[k], theta_new)
             y_predict = np.concatenate(([y_predict], [y_new]), axis=None)
         y_out = (1/(1 + np.exp(-y_predict)))
         return y_out
