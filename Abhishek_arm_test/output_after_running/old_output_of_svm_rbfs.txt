@@ -1,0 +1,19 @@
+C:\Users\parikshitd\AppData\Local\Continuum\miniconda3\envs\cs229\python.exe "C:/Users/parikshitd/Desktop/cs229 Project/Abhishek_arm_test/src/svm_rbf.py"
+(2863, 1195)
+C:\Users\parikshitd\AppData\Roaming\Python\Python36\site-packages\pandas\core\indexing.py:543: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  self.obj[item] = s
+(2147, 1195)
+(716, 1195)
+1195
+1195
+(2147, 1194)
+(716, 1194)
+got 1 value
+Accuracy on validation:98.46368715083798
+Accuracy on training:100.0
+
+Process finished with exit code 0

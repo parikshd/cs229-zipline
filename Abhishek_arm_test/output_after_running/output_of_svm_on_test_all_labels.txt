@@ -1,0 +1,522 @@
+C:\Users\parikshitd\AppData\Local\Continuum\miniconda3\envs\cs229\python.exe "C:/Users/parikshitd/Desktop/cs229 Project/Abhishek_arm_test/src/svm_on_test_all_labels.py"
+Dropping ['energy_analysis.bms.in_flight.avionics_a_capacity', 'energy_analysis.bms.in_flight.avionics_a_current.mean', 'energy_analysis.bms.in_flight.avionics_a_current.std', 'energy_analysis.bms.in_flight.avionics_a_energy', 'energy_analysis.bms.in_flight.avionics_a_power.max', 'energy_analysis.bms.in_flight.avionics_a_power.mean', 'energy_analysis.bms.in_flight.avionics_a_power.min', 'energy_analysis.bms.in_flight.avionics_a_power.std', 'energy_analysis.bms.in_flight.avionics_b_capacity', 'energy_analysis.bms.in_flight.avionics_b_current.mean', 'energy_analysis.bms.in_flight.avionics_b_current.std', 'energy_analysis.bms.in_flight.avionics_b_energy', 'energy_analysis.bms.in_flight.avionics_b_power.max', 'energy_analysis.bms.in_flight.avionics_b_power.mean', 'energy_analysis.bms.in_flight.avionics_b_power.min', 'energy_analysis.bms.in_flight.avionics_b_power.std', 'energy_analysis.bms.in_flight.avionics_capacity', 'energy_analysis.bms.in_flight.avionics_energy', 'energy_analysis.bms.in_flight.avionics_power.max', 'energy_analysis.bms.in_flight.avionics_power.min', 'energy_analysis.bms.in_flight.avionics_power.std', 'energy_analysis.bms.in_flight.capacity', 'energy_analysis.bms.in_flight.energy', 'energy_analysis.bms.in_flight.esc_aft_current.std', 'energy_analysis.bms.in_flight.esc_aft_energy', 'energy_analysis.bms.in_flight.esc_aft_power.max', 'energy_analysis.bms.in_flight.esc_aft_power.mean', 'energy_analysis.bms.in_flight.esc_aft_power.min', 'energy_analysis.bms.in_flight.esc_aft_power.std', 'energy_analysis.bms.in_flight.esc_capacity', 'energy_analysis.bms.in_flight.esc_current.max', 'energy_analysis.bms.in_flight.esc_current.mean', 'energy_analysis.bms.in_flight.esc_current.min', 'energy_analysis.bms.in_flight.esc_current.std', 'energy_analysis.bms.in_flight.esc_fore_capacity', 'energy_analysis.bms.in_flight.esc_fore_current.mean', 'energy_analysis.bms.in_flight.esc_fore_current.min', 'energy_analysis.bms.in_flight.esc_fore_current.std', 'energy_analysis.bms.in_flight.esc_fore_energy', 'energy_analysis.bms.in_flight.esc_fore_power.max', 'energy_analysis.bms.in_flight.esc_fore_power.mean', 'energy_analysis.bms.in_flight.esc_fore_power.min', 'energy_analysis.bms.in_flight.esc_fore_power.std', 'energy_analysis.bms.in_flight.esc_power.mean', 'energy_analysis.bms.in_flight.esc_power.min', 'energy_analysis.bms.in_flight.esc_power.std', 'energy_analysis.bms.in_flight.power.max', 'energy_analysis.bms.in_flight.power.mean', 'energy_analysis.bms.in_flight.power.min', 'energy_analysis.bms.in_flight.power.std', 'energy_analysis.bms.in_flight.voltage.mean', 'energy_analysis.bms.in_flight.voltage.min', 'energy_analysis.bms.in_flight.voltage.std', 'energy_analysis.bms.post_flight.avionics_a_current.mean', 'energy_analysis.bms.post_flight.avionics_a_current.std', 'energy_analysis.bms.post_flight.avionics_a_energy', 'energy_analysis.bms.post_flight.avionics_a_power.max', 'energy_analysis.bms.post_flight.avionics_a_power.mean', 'energy_analysis.bms.post_flight.avionics_a_power.min', 'energy_analysis.bms.post_flight.avionics_a_power.std', 'energy_analysis.bms.post_flight.avionics_b_current.mean', 'energy_analysis.bms.post_flight.avionics_b_current.min', 'energy_analysis.bms.post_flight.avionics_b_current.std', 'energy_analysis.bms.post_flight.avionics_b_energy', 'energy_analysis.bms.post_flight.avionics_b_power.max', 'energy_analysis.bms.post_flight.avionics_b_power.mean', 'energy_analysis.bms.post_flight.avionics_b_power.min', 'energy_analysis.bms.post_flight.avionics_b_power.std', 'energy_analysis.bms.post_flight.avionics_capacity', 'energy_analysis.bms.post_flight.avionics_current.max', 'energy_analysis.bms.post_flight.avionics_current.mean', 'energy_analysis.bms.post_flight.avionics_current.min', 'energy_analysis.bms.post_flight.avionics_current.std', 'energy_analysis.bms.post_flight.avionics_energy', 'energy_analysis.bms.post_flight.avionics_power.max', 'energy_analysis.bms.post_flight.avionics_power.mean', 'energy_analysis.bms.post_flight.avionics_power.min', 'energy_analysis.bms.post_flight.avionics_power.std', 'energy_analysis.bms.post_flight.current.mean', 'energy_analysis.bms.post_flight.current.min', 'energy_analysis.bms.post_flight.current.std', 'energy_analysis.bms.post_flight.energy', 'energy_analysis.bms.post_flight.esc_aft_current.max', 'energy_analysis.bms.post_flight.esc_aft_current.mean', 'energy_analysis.bms.post_flight.esc_aft_current.min', 'energy_analysis.bms.post_flight.esc_aft_current.std', 'energy_analysis.bms.post_flight.esc_aft_energy', 'energy_analysis.bms.post_flight.esc_aft_power.max', 'energy_analysis.bms.post_flight.esc_aft_power.mean', 'energy_analysis.bms.post_flight.esc_aft_power.min', 'energy_analysis.bms.post_flight.esc_aft_power.std', 'energy_analysis.bms.post_flight.esc_capacity', 'energy_analysis.bms.post_flight.esc_current.max', 'energy_analysis.bms.post_flight.esc_current.mean', 'energy_analysis.bms.post_flight.esc_current.min', 'energy_analysis.bms.post_flight.esc_current.std', 'energy_analysis.bms.post_flight.esc_fore_capacity', 'energy_analysis.bms.post_flight.esc_fore_current.max', 'energy_analysis.bms.post_flight.esc_fore_current.mean', 'energy_analysis.bms.post_flight.esc_fore_current.min', 'energy_analysis.bms.post_flight.esc_fore_current.std', 'energy_analysis.bms.post_flight.esc_fore_energy', 'energy_analysis.bms.post_flight.esc_fore_power.max', 'energy_analysis.bms.post_flight.esc_fore_power.mean', 'energy_analysis.bms.post_flight.esc_fore_power.min', 'energy_analysis.bms.post_flight.esc_fore_power.std', 'energy_analysis.bms.post_flight.esc_power.max', 'energy_analysis.bms.post_flight.esc_power.mean', 'energy_analysis.bms.post_flight.esc_power.min', 'energy_analysis.bms.post_flight.esc_power.std', 'energy_analysis.bms.post_flight.power.max', 'energy_analysis.bms.post_flight.power.mean', 'energy_analysis.bms.post_flight.power.min', 'energy_analysis.bms.post_flight.power.std', 'energy_analysis.bms.post_flight.voltage.max', 'energy_analysis.bms.post_flight.voltage.mean', 'energy_analysis.bms.preflight.avionics_a_current.min', 'energy_analysis.bms.preflight.avionics_a_energy', 'energy_analysis.bms.preflight.avionics_a_power.max', 'energy_analysis.bms.preflight.avionics_a_power.mean', 'energy_analysis.bms.preflight.avionics_a_power.min', 'energy_analysis.bms.preflight.avionics_a_power.std', 'energy_analysis.bms.preflight.avionics_b_capacity', 'energy_analysis.bms.preflight.avionics_b_current.mean', 'energy_analysis.bms.preflight.avionics_b_energy', 'energy_analysis.bms.preflight.avionics_b_power.max', 'energy_analysis.bms.preflight.avionics_b_power.mean', 'energy_analysis.bms.preflight.avionics_b_power.min', 'energy_analysis.bms.preflight.avionics_b_power.std', 'energy_analysis.bms.preflight.avionics_capacity', 'energy_analysis.bms.preflight.avionics_current.std', 'energy_analysis.bms.preflight.avionics_energy', 'energy_analysis.bms.preflight.avionics_power.max', 'energy_analysis.bms.preflight.avionics_power.mean', 'energy_analysis.bms.preflight.avionics_power.min', 'energy_analysis.bms.preflight.avionics_power.std', 'energy_analysis.bms.preflight.capacity', 'energy_analysis.bms.preflight.current.mean', 'energy_analysis.bms.preflight.energy', 'energy_analysis.bms.preflight.esc_aft_capacity', 'energy_analysis.bms.preflight.esc_aft_current.max', 'energy_analysis.bms.preflight.esc_aft_current.mean', 'energy_analysis.bms.preflight.esc_aft_current.std', 'energy_analysis.bms.preflight.esc_aft_energy', 'energy_analysis.bms.preflight.esc_aft_power.max', 'energy_analysis.bms.preflight.esc_aft_power.mean', 'energy_analysis.bms.preflight.esc_aft_power.min', 'energy_analysis.bms.preflight.esc_aft_power.std', 'energy_analysis.bms.preflight.esc_capacity', 'energy_analysis.bms.preflight.esc_current.max', 'energy_analysis.bms.preflight.esc_current.mean', 'energy_analysis.bms.preflight.esc_current.min', 'energy_analysis.bms.preflight.esc_current.std', 'energy_analysis.bms.preflight.esc_fore_capacity', 'energy_analysis.bms.preflight.esc_fore_current.max', 'energy_analysis.bms.preflight.esc_fore_current.mean', 'energy_analysis.bms.preflight.esc_fore_current.min', 'energy_analysis.bms.preflight.esc_fore_current.std', 'energy_analysis.bms.preflight.esc_fore_energy', 'energy_analysis.bms.preflight.esc_fore_power.max', 'energy_analysis.bms.preflight.esc_fore_power.mean', 'energy_analysis.bms.preflight.esc_fore_power.min', 'energy_analysis.bms.preflight.esc_fore_power.std', 'energy_analysis.bms.preflight.esc_power.max', 'energy_analysis.bms.preflight.esc_power.mean', 'energy_analysis.bms.preflight.esc_power.min', 'energy_analysis.bms.preflight.esc_power.std', 'energy_analysis.bms.preflight.power.max', 'energy_analysis.bms.preflight.power.mean', 'energy_analysis.bms.preflight.power.min', 'energy_analysis.bms.preflight.power.std', 'energy_analysis.bms.preflight.voltage.min', 'energy_analysis.bms.preflight.voltage.std', 'energy_analysis.coulomb_counter.in_flight.capacity', 'energy_analysis.coulomb_counter.in_flight.energy', 'energy_analysis.coulomb_counter.in_flight.voltage.mean', 'energy_analysis.coulomb_counter.in_flight.voltage.min', 'energy_analysis.coulomb_counter.in_flight.voltage.std', 'energy_analysis.coulomb_counter.post_flight.capacity', 'energy_analysis.coulomb_counter.post_flight.energy', 'energy_analysis.coulomb_counter.post_flight.voltage.max', 'energy_analysis.coulomb_counter.post_flight.voltage.min', 'energy_analysis.coulomb_counter.post_flight.voltage.std', 'energy_analysis.coulomb_counter.preflight.energy', 'energy_analysis.coulomb_counter.preflight.voltage.mean', 'energy_analysis.coulomb_counter.preflight.voltage.std', 'energy_analysis.esc_aft.in_flight.capacity', 'energy_analysis.esc_aft.in_flight.current.mean', 'energy_analysis.esc_aft.in_flight.current.std', 'energy_analysis.esc_aft.in_flight.energy', 'energy_analysis.esc_aft.in_flight.power.max', 'energy_analysis.esc_aft.in_flight.power.mean', 'energy_analysis.esc_aft.in_flight.power.std', 'energy_analysis.esc_aft.in_flight.voltage.mean', 'energy_analysis.esc_aft.in_flight.voltage.min', 'energy_analysis.esc_aft.in_flight.voltage.std', 'energy_analysis.esc_aft.post_flight.current.min', 'energy_analysis.esc_aft.post_flight.energy', 'energy_analysis.esc_aft.post_flight.power.max', 'energy_analysis.esc_aft.post_flight.power.mean', 'energy_analysis.esc_aft.post_flight.power.min', 'energy_analysis.esc_aft.post_flight.power.std', 'energy_analysis.esc_aft.post_flight.voltage.max', 'energy_analysis.esc_aft.post_flight.voltage.mean', 'energy_analysis.esc_aft.post_flight.voltage.std', 'energy_analysis.esc_aft.preflight.current.mean', 'energy_analysis.esc_aft.preflight.current.std', 'energy_analysis.esc_aft.preflight.energy', 'energy_analysis.esc_aft.preflight.power.max', 'energy_analysis.esc_aft.preflight.power.mean', 'energy_analysis.esc_aft.preflight.power.std', 'energy_analysis.esc_aft.preflight.voltage.max', 'energy_analysis.esc_aft.preflight.voltage.mean', 'energy_analysis.esc_fore.in_flight.capacity', 'energy_analysis.esc_fore.in_flight.current.mean', 'energy_analysis.esc_fore.in_flight.current.min', 'energy_analysis.esc_fore.in_flight.current.std', 'energy_analysis.esc_fore.in_flight.energy', 'energy_analysis.esc_fore.in_flight.power.max', 'energy_analysis.esc_fore.in_flight.power.mean', 'energy_analysis.esc_fore.in_flight.power.min', 'energy_analysis.esc_fore.in_flight.power.std', 'energy_analysis.esc_fore.in_flight.voltage.mean', 'energy_analysis.esc_fore.in_flight.voltage.min', 'energy_analysis.esc_fore.in_flight.voltage.std', 'energy_analysis.esc_fore.post_flight.current.mean', 'energy_analysis.esc_fore.post_flight.current.min', 'energy_analysis.esc_fore.post_flight.current.std', 'energy_analysis.esc_fore.post_flight.energy', 'energy_analysis.esc_fore.post_flight.power.max', 'energy_analysis.esc_fore.post_flight.power.mean', 'energy_analysis.esc_fore.post_flight.power.min', 'energy_analysis.esc_fore.post_flight.power.std', 'energy_analysis.esc_fore.post_flight.voltage.max', 'energy_analysis.esc_fore.post_flight.voltage.mean', 'energy_analysis.esc_fore.post_flight.voltage.min', 'energy_analysis.esc_fore.preflight.capacity', 'energy_analysis.esc_fore.preflight.current.mean', 'energy_analysis.esc_fore.preflight.current.std', 'energy_analysis.esc_fore.preflight.energy', 'energy_analysis.esc_fore.preflight.power.max', 'energy_analysis.esc_fore.preflight.power.mean', 'energy_analysis.esc_fore.preflight.power.std', 'energy_analysis.esc_fore.preflight.voltage.mean', 'energy_analysis.esc_fore.preflight.voltage.std', 'events.recovery_timestamp', 'flight_distance_m', 'flight_duration_s', 'flight_id', 'launch.true_airspeed_mps', 'motor_pod.aft.esc_temp_degC.mean', 'motor_pod.aft.esc_temp_degC.min', 'motor_pod.aft.motor_temp_degC.max', 'motor_pod.aft.motor_temp_degC.mean', 'motor_pod.aft.motor_temp_degC.min', 'motor_pod.fore.esc_temp_degC.mean', 'motor_pod.fore.esc_temp_degC.min', 'motor_pod.fore.motor_temp_degC.mean', 'motor_pod.fore.motor_temp_degC.min', 'motor_pod.fore.motor_temp_degC.std', 'recovery.max_accel_body_mps2_mag', 'recovery.max_angular_accel_body_radps2_mag', 'recovery.orientation_rad_2', 'recovery.position_sigma_ned_m_1', 'recovery.position_sigma_ned_m_2', 'recovery.time', 'recovery.tracking_error_m_1', 'recovery.velocity_dcd_mps_0', 'serial_numbers.RobinBatteryA.SAME70.CHIPID_CIDR', 'serial_numbers.RobinBatteryB.SAME70.CHIPID_CIDR', 'serial_numbers.RobinBatteryC.SAME70.CHIPID_CIDR', 'serial_numbers.RobinFlightPrimary.CPU.SERIAL_NUM', 'serial_numbers.RobinFlightPrimary.TMS570.DEVID', 'serial_numbers.RobinFlightPrimary.TMS570.DIEID', 'serial_numbers.RobinFlightPrimary.TMS570.DIEID_REG_0_1', 'serial_numbers.RobinMission.SAME70.CHIPID_CIDR', 'serial_numbers.RobinParaland.CPU.SERIAL_NUM', 'serial_numbers.RobinParaland.TMS570.DEVID', 'serial_numbers.RobinParaland.TMS570.DIEID', 'serial_numbers.RobinParaland.TMS570.DIEID_REG_0_1', 'serial_numbers.RobinTailInboard.GRAUPNER_TAIL_INBOARD.HW_REV', 'serial_numbers.RobinTailInboard.SAME70.CHIPID_CIDR', 'serial_numbers.RobinTailInboard.VOLZ_TAIL_INBOARD_RIGHT.SERIAL_NUM', 'serial_numbers.RobinTailOutboard.GRAUPNER_TAIL_OUTBOARD.HW_REV', 'serial_numbers.RobinTailOutboard.GRAUPNER_TAIL_OUTBOARD.SERIAL_NUM', 'serial_numbers.RobinTailOutboard.GRAUPNER_TAIL_OUTBOARD.SW_REV', 'serial_numbers.RobinTailOutboard.SAME70.CHIPID_CIDR', 'serial_numbers.RobinTailOutboard.VOLZ_TAIL_OUTBOARD_LEFT.SERIAL_NUM', 'serial_numbers.RobinWingLeft.SAME70.CHIPID_CIDR', 'serial_numbers.RobinWingRight.SAME70.CHIPID_CIDR', 'serial_numbers.RobinWingRight.VOLZ_WING_OUTBOARD_LEFT.SERIAL_NUM', 'tracking_error.airspeed.GUIDANCE_MODE_AGL_SLOT_HELIX.std', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_APPROACH.std', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_BASE_LEG.std', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_BYPASS.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_BYPASS.std', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.std', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.std', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_DROP.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_EXIT.std', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.std', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.std', 'tracking_error.airspeed.GUIDANCE_MODE_FIXED_Z_HELIX.std', 'tracking_error.airspeed.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.mean', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.std', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.std', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_CLIMBOUT.min', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_CLIMBOUT.std', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_CROSSWIND.std', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.max', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.std', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_OVAL_EXIT.mean', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_OVAL_EXIT.std', 'tracking_error.airspeed.GUIDANCE_MODE_UNKNOWN.mean', 'tracking_error.airspeed.GUIDANCE_MODE_UNKNOWN.min', 'tracking_error.lateral.GUIDANCE_MODE_AGL_SLOT_HELIX.std', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_APPROACH.min', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_BASE_LEG.min', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_BASE_LEG.std', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_BYPASS.std', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.mean', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.min', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.min', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.min', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.mean', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.min', 'tracking_error.lateral.GUIDANCE_MODE_FIXED_Z_HELIX.mean', 'tracking_error.lateral.GUIDANCE_MODE_FIXED_Z_HELIX.min', 'tracking_error.lateral.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.mean', 'tracking_error.lateral.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.std', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.min', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.mean', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.min', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_CLIMBOUT.mean', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_CLIMBOUT.std', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_CROSSWIND.mean', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_CROSSWIND.std', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.mean', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.min', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_FINAL_APPROACH.mean', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_FINAL_APPROACH.min', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_FINAL_APPROACH.std', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.mean', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.min', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.std', 'tracking_error.lateral.GUIDANCE_MODE_TRANSIT.max', 'tracking_error.lateral.GUIDANCE_MODE_TRANSIT.mean', 'tracking_error.lateral.GUIDANCE_MODE_TRANSIT.std', 'tracking_error.lateral.GUIDANCE_MODE_UNKNOWN.mean', 'tracking_error.lateral.GUIDANCE_MODE_UNKNOWN.min', 'tracking_error.lateral.GUIDANCE_MODE_UNKNOWN.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_BASE_LEG.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_BYPASS.mean', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_BYPASS.min', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_BYPASS.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_DROP.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.std', 'tracking_error.phi.GUIDANCE_MODE_FIXED_Z_HELIX.std', 'tracking_error.phi.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.max', 'tracking_error.phi.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.min', 'tracking_error.phi.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.std', 'tracking_error.phi.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.std', 'tracking_error.phi.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.std', 'tracking_error.phi.GUIDANCE_MODE_LANDING_CLIMBOUT.mean', 'tracking_error.phi.GUIDANCE_MODE_LANDING_CLIMBOUT.min', 'tracking_error.phi.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.mean', 'tracking_error.phi.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.std', 'tracking_error.phi.GUIDANCE_MODE_LANDING_FINAL_APPROACH.std', 'tracking_error.phi.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.std', 'tracking_error.phi.GUIDANCE_MODE_LANDING_OVAL_EXIT.min', 'tracking_error.phi.GUIDANCE_MODE_LANDING_OVAL_EXIT.std', 'tracking_error.phi.GUIDANCE_MODE_TRANSIT.mean', 'tracking_error.phi.GUIDANCE_MODE_TRANSIT.std', 'tracking_error.phi.GUIDANCE_MODE_TRANSIT_LAUNCH.min', 'tracking_error.phi.GUIDANCE_MODE_TRANSIT_LAUNCH.std', 'tracking_error.phi.GUIDANCE_MODE_UNKNOWN.max', 'tracking_error.phi.GUIDANCE_MODE_UNKNOWN.mean', 'tracking_error.phi.GUIDANCE_MODE_UNKNOWN.min', 'tracking_error.theta.GUIDANCE_MODE_AGL_SLOT_HELIX.std', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_BASE_LEG.std', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_BYPASS.max', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_BYPASS.mean', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_BYPASS.min', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_BYPASS.std', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.std', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.std', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_DROP.std', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_EXIT.std', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.std', 'tracking_error.theta.GUIDANCE_MODE_FIXED_Z_HELIX.std', 'tracking_error.theta.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.min', 'tracking_error.theta.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.std', 'tracking_error.theta.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.std', 'tracking_error.theta.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.std', 'tracking_error.theta.GUIDANCE_MODE_LANDING_CLIMBOUT.min', 'tracking_error.theta.GUIDANCE_MODE_LANDING_CLIMBOUT.std', 'tracking_error.theta.GUIDANCE_MODE_LANDING_CROSSWIND.max', 'tracking_error.theta.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.std', 'tracking_error.theta.GUIDANCE_MODE_LANDING_OVAL_EXIT.max', 'tracking_error.theta.GUIDANCE_MODE_LANDING_OVAL_EXIT.min', 'tracking_error.theta.GUIDANCE_MODE_LANDING_OVAL_EXIT.std', 'tracking_error.theta.GUIDANCE_MODE_TRANSIT.mean', 'tracking_error.theta.GUIDANCE_MODE_TRANSIT.std', 'tracking_error.theta.GUIDANCE_MODE_TRANSIT_LAUNCH.max', 'tracking_error.theta.GUIDANCE_MODE_TRANSIT_LAUNCH.mean', 'tracking_error.theta.GUIDANCE_MODE_TRANSIT_LAUNCH.std', 'tracking_error.theta.GUIDANCE_MODE_UNKNOWN.max', 'tracking_error.theta.GUIDANCE_MODE_UNKNOWN.mean', 'tracking_error.theta.GUIDANCE_MODE_UNKNOWN.min', 'tracking_error.theta.GUIDANCE_MODE_UNKNOWN.std', 'tracking_error.vertical.GUIDANCE_MODE_AGL_SLOT_HELIX.mean', 'tracking_error.vertical.GUIDANCE_MODE_AGL_SLOT_HELIX.std', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_APPROACH.min', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_APPROACH.std', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_BASE_LEG.std', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_BYPASS.max', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_BYPASS.min', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_BYPASS.std', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.std', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.max', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.mean', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.min', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.std', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_DROP.std', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_EXIT.mean', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_EXIT.std', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.std', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.std', 'tracking_error.vertical.GUIDANCE_MODE_FIXED_Z_HELIX.std', 'tracking_error.vertical.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.max', 'tracking_error.vertical.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.mean', 'tracking_error.vertical.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.min', 'tracking_error.vertical.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.std', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.std', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.std', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_CLIMBOUT.mean', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_CLIMBOUT.std', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_CROSSWIND.min', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_CROSSWIND.std', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.std', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_FINAL_APPROACH.std', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.std', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_OVAL_EXIT.min', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_OVAL_EXIT.std', 'tracking_error.vertical.GUIDANCE_MODE_TRANSIT.max', 'tracking_error.vertical.GUIDANCE_MODE_TRANSIT.mean', 'tracking_error.vertical.GUIDANCE_MODE_TRANSIT.std', 'tracking_error.vertical.GUIDANCE_MODE_TRANSIT_LAUNCH.mean', 'tracking_error.vertical.GUIDANCE_MODE_TRANSIT_LAUNCH.std', 'tracking_error.vertical.GUIDANCE_MODE_UNKNOWN.max', 'tracking_error.vertical.GUIDANCE_MODE_UNKNOWN.mean', 'tracking_error.vertical.GUIDANCE_MODE_UNKNOWN.min', 'tracking_error.vertical.GUIDANCE_MODE_UNKNOWN.std', 'tracking_error.vh.GUIDANCE_MODE_AGL_SLOT_HELIX.std', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_APPROACH.std', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_BASE_LEG.mean', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_BASE_LEG.min', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_BASE_LEG.std', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_BYPASS.max', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_BYPASS.mean', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_BYPASS.min', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_BYPASS.std', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.mean', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.std', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.min', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.std', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_DROP.mean', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_DROP.min', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_DROP.std', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_EXIT.mean', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_EXIT.std', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.mean', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.min', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.mean', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.std', 'tracking_error.vh.GUIDANCE_MODE_FIXED_Z_HELIX.mean', 'tracking_error.vh.GUIDANCE_MODE_FIXED_Z_HELIX.std', 'tracking_error.vh.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.max', 'tracking_error.vh.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.mean', 'tracking_error.vh.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.min', 'tracking_error.vh.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.std', 'tracking_error.vh.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.std', 'tracking_error.vh.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.max', 'tracking_error.vh.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.min', 'tracking_error.vh.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.std', 'tracking_error.vh.GUIDANCE_MODE_LANDING_CLIMBOUT.max', 'tracking_error.vh.GUIDANCE_MODE_LANDING_CLIMBOUT.mean', 'tracking_error.vh.GUIDANCE_MODE_LANDING_CLIMBOUT.std', 'tracking_error.vh.GUIDANCE_MODE_LANDING_CROSSWIND.min', 'tracking_error.vh.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.max', 'tracking_error.vh.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.min', 'tracking_error.vh.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.std', 'tracking_error.vh.GUIDANCE_MODE_LANDING_FINAL_APPROACH.std', 'tracking_error.vh.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.std', 'tracking_error.vh.GUIDANCE_MODE_LANDING_OVAL_EXIT.max', 'tracking_error.vh.GUIDANCE_MODE_LANDING_OVAL_EXIT.min', 'tracking_error.vh.GUIDANCE_MODE_LANDING_OVAL_EXIT.std', 'tracking_error.vh.GUIDANCE_MODE_TRANSIT.std', 'tracking_error.vh.GUIDANCE_MODE_TRANSIT_LAUNCH.std', 'tracking_error.vh.GUIDANCE_MODE_UNKNOWN.max', 'tracking_error.vh.GUIDANCE_MODE_UNKNOWN.mean', 'tracking_error.vh.GUIDANCE_MODE_UNKNOWN.min', 'tracking_error.vh.GUIDANCE_MODE_UNKNOWN.std', 'weather.boot.air_temp.mean', 'weather.boot.air_temp.min', 'weather.boot.rel_humidity.mean', 'weather.boot.rel_humidity.min', 'weather.boot.static_pressure.mean', 'weather.boot.static_pressure.min', 'weather.boot.wind_dir.max', 'weather.boot.wind_dir.mean', 'weather.boot.wind_dir.std', 'weather.boot.wind_mag.max', 'weather.boot.wind_mag.mean', 'weather.boot.wind_mag.std', 'weather.delivery.air_temp.mean', 'weather.delivery.air_temp.min', 'weather.delivery.rel_humidity.mean', 'weather.delivery.rel_humidity.min', 'weather.delivery.static_pressure.mean', 'weather.delivery.static_pressure.min', 'weather.delivery.wind_dir.mean', 'weather.delivery.wind_dir.min', 'weather.delivery.wind_mag.mean', 'weather.delivery.wind_mag.min', 'weather.flight.air_temp.max', 'weather.flight.air_temp.mean', 'weather.flight.air_temp.min', 'weather.flight.rel_humidity.mean', 'weather.flight.static_pressure.mean', 'weather.flight.static_pressure.std', 'weather.flight.wind_mag.mean', 'weather.flight.wind_mag.std', 'weather.flight_failure.air_temp.mean', 'weather.flight_failure.air_temp.min', 'weather.flight_failure.air_temp.std', 'weather.flight_failure.rel_humidity.mean', 'weather.flight_failure.rel_humidity.min', 'weather.flight_failure.static_pressure.mean', 'weather.flight_failure.static_pressure.min', 'weather.flight_failure.wind_dir.mean', 'weather.flight_failure.wind_dir.min', 'weather.flight_failure.wind_mag.mean', 'weather.flight_failure.wind_mag.min', 'weather.launch.air_temp.max', 'weather.launch.air_temp.mean', 'weather.launch.air_temp.min', 'weather.launch.rel_humidity.max', 'weather.launch.rel_humidity.mean', 'weather.launch.rel_humidity.min', 'weather.launch.static_pressure.mean', 'weather.launch.static_pressure.min', 'weather.launch.wind_dir.mean', 'weather.launch.wind_dir.min', 'weather.launch.wind_mag.mean', 'weather.launch.wind_mag.min', 'weather.launcher_identified.air_temp.max', 'weather.launcher_identified.air_temp.mean', 'weather.launcher_identified.air_temp.min', 'weather.launcher_identified.rel_humidity.max', 'weather.launcher_identified.rel_humidity.mean', 'weather.launcher_identified.rel_humidity.min', 'weather.launcher_identified.static_pressure.max', 'weather.launcher_identified.static_pressure.mean', 'weather.launcher_identified.static_pressure.min', 'weather.launcher_identified.wind_dir.mean', 'weather.launcher_identified.wind_dir.min', 'weather.launcher_identified.wind_mag.mean', 'weather.launcher_identified.wind_mag.min', 'weather.mission_failure.air_temp.mean', 'weather.mission_failure.air_temp.min', 'weather.mission_failure.rel_humidity.mean', 'weather.mission_failure.rel_humidity.min', 'weather.mission_failure.static_pressure.mean', 'weather.mission_failure.static_pressure.min', 'weather.mission_failure.wind_dir.mean', 'weather.mission_failure.wind_dir.min', 'weather.mission_failure.wind_mag.mean', 'weather.mission_failure.wind_mag.min', 'weather.recovery.air_temp.max', 'weather.recovery.air_temp.mean', 'weather.recovery.air_temp.min', 'weather.recovery.rel_humidity.max', 'weather.recovery.rel_humidity.mean', 'weather.recovery.rel_humidity.min', 'weather.recovery.static_pressure.mean', 'weather.recovery.static_pressure.min', 'weather.recovery.wind_dir.mean', 'weather.recovery.wind_dir.min', 'weather.recovery.wind_mag.mean', 'weather.recovery.wind_mag.min', 'weather.safety_failure.air_temp.max', 'weather.safety_failure.air_temp.mean', 'weather.safety_failure.air_temp.min', 'weather.safety_failure.rel_humidity.max', 'weather.safety_failure.rel_humidity.mean', 'weather.safety_failure.rel_humidity.min', 'weather.safety_failure.static_pressure.max', 'weather.safety_failure.static_pressure.mean', 'weather.safety_failure.static_pressure.min', 'weather.safety_failure.static_pressure.std', 'weather.safety_failure.wind_dir.max', 'weather.safety_failure.wind_dir.mean', 'weather.safety_failure.wind_dir.min', 'weather.safety_failure.wind_dir.std', 'weather.safety_failure.wind_mag.max', 'weather.safety_failure.wind_mag.mean', 'weather.safety_failure.wind_mag.min', 'zip_number', 'air_distance_m', 'config.flight_id', 'config.nest_hold_id', 'config.zip_number', 'delivery_site.id', 'energy_analysis.bms.in_flight.avionics_a_current.max', 'energy_analysis.bms.in_flight.avionics_a_current.min', 'energy_analysis.bms.in_flight.avionics_b_current.max', 'energy_analysis.bms.in_flight.avionics_b_current.min', 'energy_analysis.bms.in_flight.avionics_current.max', 'energy_analysis.bms.in_flight.avionics_current.mean', 'energy_analysis.bms.in_flight.avionics_current.min', 'energy_analysis.bms.in_flight.avionics_power.mean', 'energy_analysis.bms.in_flight.current.max', 'energy_analysis.bms.in_flight.current.min', 'energy_analysis.bms.in_flight.current.std', 'energy_analysis.bms.in_flight.esc_aft_capacity', 'energy_analysis.bms.in_flight.esc_aft_current.max', 'energy_analysis.bms.in_flight.esc_aft_current.mean', 'energy_analysis.bms.in_flight.esc_aft_current.min', 'energy_analysis.bms.in_flight.esc_fore_current.max', 'energy_analysis.bms.in_flight.esc_power.max', 'energy_analysis.bms.in_flight.voltage.max', 'energy_analysis.bms.post_flight.avionics_a_current.max', 'energy_analysis.bms.post_flight.avionics_a_current.min', 'energy_analysis.bms.post_flight.avionics_b_capacity', 'energy_analysis.bms.post_flight.avionics_b_current.max', 'energy_analysis.bms.post_flight.capacity', 'energy_analysis.bms.post_flight.current.max', 'energy_analysis.bms.post_flight.esc_aft_capacity', 'energy_analysis.bms.post_flight.voltage.min', 'energy_analysis.bms.post_flight.voltage.std', 'energy_analysis.bms.preflight.avionics_a_capacity', 'energy_analysis.bms.preflight.avionics_a_current.max', 'energy_analysis.bms.preflight.avionics_a_current.mean', 'energy_analysis.bms.preflight.avionics_a_current.std', 'energy_analysis.bms.preflight.avionics_b_current.max', 'energy_analysis.bms.preflight.avionics_b_current.min', 'energy_analysis.bms.preflight.avionics_b_current.std', 'energy_analysis.bms.preflight.avionics_current.max', 'energy_analysis.bms.preflight.avionics_current.mean', 'energy_analysis.bms.preflight.avionics_current.min', 'energy_analysis.bms.preflight.current.max', 'energy_analysis.bms.preflight.current.min', 'energy_analysis.bms.preflight.current.std', 'energy_analysis.bms.preflight.esc_aft_current.min', 'energy_analysis.bms.preflight.voltage.max', 'energy_analysis.bms.preflight.voltage.mean', 'energy_analysis.coulomb_counter.in_flight.voltage.max', 'energy_analysis.coulomb_counter.post_flight.voltage.mean', 'energy_analysis.coulomb_counter.preflight.capacity', 'energy_analysis.coulomb_counter.preflight.voltage.max', 'energy_analysis.coulomb_counter.preflight.voltage.min', 'energy_analysis.esc_aft.in_flight.current.max', 'energy_analysis.esc_aft.in_flight.voltage.max', 'energy_analysis.esc_aft.post_flight.capacity', 'energy_analysis.esc_aft.post_flight.current.max', 'energy_analysis.esc_aft.post_flight.current.mean', 'energy_analysis.esc_aft.post_flight.current.std', 'energy_analysis.esc_aft.post_flight.voltage.min', 'energy_analysis.esc_aft.preflight.capacity', 'energy_analysis.esc_aft.preflight.current.max', 'energy_analysis.esc_aft.preflight.voltage.min', 'energy_analysis.esc_aft.preflight.voltage.std', 'energy_analysis.esc_fore.in_flight.current.max', 'energy_analysis.esc_fore.in_flight.voltage.max', 'energy_analysis.esc_fore.post_flight.capacity', 'energy_analysis.esc_fore.post_flight.current.max', 'energy_analysis.esc_fore.post_flight.voltage.std', 'energy_analysis.esc_fore.preflight.current.max', 'energy_analysis.esc_fore.preflight.voltage.max', 'energy_analysis.esc_fore.preflight.voltage.min', 'events.delivery_timestamp', 'events.launch_timestamp', 'launch.calibrated_airspeed_mps', 'launch.groundspeed_mps', 'motor_pod.aft.esc_temp_degC.max', 'motor_pod.aft.esc_temp_degC.std', 'motor_pod.fore.esc_temp_degC.max', 'motor_pod.fore.esc_temp_degC.std', 'motor_pod.fore.motor_temp_degC.max', 'recovery.groundspeed_mps', 'recovery.heading', 'recovery.max_abs_accel_body_mps2_0', 'recovery.max_abs_accel_body_mps2_1', 'recovery.max_abs_accel_body_mps2_2', 'recovery.max_abs_angular_accel_body_radps2_0', 'recovery.max_abs_angular_accel_body_radps2_1', 'recovery.max_abs_angular_accel_body_radps2_2', 'recovery.orientation_rad_0', 'recovery.orientation_rad_1', 'recovery.pass_number', 'recovery.position_dcd_m_0', 'recovery.position_dcd_m_1', 'recovery.position_dcd_m_2', 'recovery.position_sigma_ned_m_0', 'recovery.relative_yaw_rad', 'recovery.tracking_error_m_2', 'recovery.true_airspeed_mps', 'recovery.velocity_dcd_mps_1', 'recovery.velocity_dcd_mps_2', 'serial_numbers.RobinFlightPrimary.TMS570.DIEID_REG_2_3', 'serial_numbers.RobinMission.CELL_MODEM.SERIAL_NUM', 'serial_numbers.RobinParaland.TMS570.DIEID_REG_2_3', 'serial_numbers.RobinTailInboard.GRAUPNER_TAIL_INBOARD.SERIAL_NUM', 'serial_numbers.RobinTailInboard.GRAUPNER_TAIL_INBOARD.SW_REV', 'serial_numbers.RobinWingLeft.VOLZ_WING_INBOARD_LEFT.SERIAL_NUM', 'serial_numbers.RobinWingRight.VOLZ_WING_OUTBOARD_RIGHT.SERIAL_NUM', 'tracking_error.airspeed.GUIDANCE_MODE_AGL_SLOT_HELIX.max', 'tracking_error.airspeed.GUIDANCE_MODE_AGL_SLOT_HELIX.mean', 'tracking_error.airspeed.GUIDANCE_MODE_AGL_SLOT_HELIX.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_APPROACH.max', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_APPROACH.mean', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_APPROACH.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_BASE_LEG.max', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_BASE_LEG.mean', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_BASE_LEG.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_BYPASS.max', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_BYPASS.mean', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.max', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.mean', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.max', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.mean', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_DROP.max', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_DROP.mean', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_DROP.std', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_EXIT.max', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_EXIT.mean', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_EXIT.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.max', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.mean', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.min', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.max', 'tracking_error.airspeed.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.mean', 'tracking_error.airspeed.GUIDANCE_MODE_FIXED_Z_HELIX.max', 'tracking_error.airspeed.GUIDANCE_MODE_FIXED_Z_HELIX.mean', 'tracking_error.airspeed.GUIDANCE_MODE_FIXED_Z_HELIX.min', 'tracking_error.airspeed.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.max', 'tracking_error.airspeed.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.min', 'tracking_error.airspeed.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.std', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.max', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.mean', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.min', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.max', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.mean', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.min', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_CLIMBOUT.max', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_CLIMBOUT.mean', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_CROSSWIND.max', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_CROSSWIND.mean', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_CROSSWIND.min', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.mean', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.min', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_FINAL_APPROACH.max', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_FINAL_APPROACH.mean', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_FINAL_APPROACH.min', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_FINAL_APPROACH.std', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.max', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.mean', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.min', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.std', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_OVAL_EXIT.max', 'tracking_error.airspeed.GUIDANCE_MODE_LANDING_OVAL_EXIT.min', 'tracking_error.airspeed.GUIDANCE_MODE_TRANSIT.mean', 'tracking_error.airspeed.GUIDANCE_MODE_TRANSIT.min', 'tracking_error.airspeed.GUIDANCE_MODE_TRANSIT_LAUNCH.max', 'tracking_error.airspeed.GUIDANCE_MODE_TRANSIT_LAUNCH.mean', 'tracking_error.airspeed.GUIDANCE_MODE_TRANSIT_LAUNCH.min', 'tracking_error.airspeed.GUIDANCE_MODE_TRANSIT_LAUNCH.std', 'tracking_error.airspeed.GUIDANCE_MODE_UNKNOWN.max', 'tracking_error.airspeed.GUIDANCE_MODE_UNKNOWN.std', 'tracking_error.lateral.GUIDANCE_MODE_AGL_SLOT_HELIX.max', 'tracking_error.lateral.GUIDANCE_MODE_AGL_SLOT_HELIX.mean', 'tracking_error.lateral.GUIDANCE_MODE_AGL_SLOT_HELIX.min', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_APPROACH.max', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_APPROACH.mean', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_APPROACH.std', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_BASE_LEG.max', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_BASE_LEG.mean', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_BYPASS.max', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_BYPASS.mean', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_BYPASS.min', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.max', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.std', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.max', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.mean', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.std', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_DROP.max', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_DROP.mean', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_DROP.min', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_DROP.std', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_EXIT.max', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_EXIT.mean', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_EXIT.min', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_EXIT.std', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.max', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.mean', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.std', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.max', 'tracking_error.lateral.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.std', 'tracking_error.lateral.GUIDANCE_MODE_FIXED_Z_HELIX.max', 'tracking_error.lateral.GUIDANCE_MODE_FIXED_Z_HELIX.std', 'tracking_error.lateral.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.max', 'tracking_error.lateral.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.min', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.max', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.mean', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.std', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.max', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.std', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_CLIMBOUT.max', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_CLIMBOUT.min', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_CROSSWIND.max', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_CROSSWIND.min', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.max', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.std', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_FINAL_APPROACH.max', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.max', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_OVAL_EXIT.max', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_OVAL_EXIT.mean', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_OVAL_EXIT.min', 'tracking_error.lateral.GUIDANCE_MODE_LANDING_OVAL_EXIT.std', 'tracking_error.lateral.GUIDANCE_MODE_TRANSIT.min', 'tracking_error.lateral.GUIDANCE_MODE_TRANSIT_LAUNCH.max', 'tracking_error.lateral.GUIDANCE_MODE_TRANSIT_LAUNCH.mean', 'tracking_error.lateral.GUIDANCE_MODE_TRANSIT_LAUNCH.min', 'tracking_error.lateral.GUIDANCE_MODE_TRANSIT_LAUNCH.std', 'tracking_error.lateral.GUIDANCE_MODE_UNKNOWN.max', 'tracking_error.phi.GUIDANCE_MODE_AGL_SLOT_HELIX.max', 'tracking_error.phi.GUIDANCE_MODE_AGL_SLOT_HELIX.mean', 'tracking_error.phi.GUIDANCE_MODE_AGL_SLOT_HELIX.min', 'tracking_error.phi.GUIDANCE_MODE_AGL_SLOT_HELIX.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_APPROACH.max', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_APPROACH.mean', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_APPROACH.min', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_APPROACH.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_BASE_LEG.max', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_BASE_LEG.mean', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_BASE_LEG.min', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_BYPASS.max', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.max', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.mean', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.min', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.max', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.mean', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.min', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_DROP.max', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_DROP.mean', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_DROP.min', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_EXIT.max', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_EXIT.mean', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_EXIT.min', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_EXIT.std', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.max', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.mean', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.min', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.max', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.mean', 'tracking_error.phi.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.min', 'tracking_error.phi.GUIDANCE_MODE_FIXED_Z_HELIX.max', 'tracking_error.phi.GUIDANCE_MODE_FIXED_Z_HELIX.mean', 'tracking_error.phi.GUIDANCE_MODE_FIXED_Z_HELIX.min', 'tracking_error.phi.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.mean', 'tracking_error.phi.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.max', 'tracking_error.phi.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.mean', 'tracking_error.phi.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.min', 'tracking_error.phi.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.max', 'tracking_error.phi.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.mean', 'tracking_error.phi.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.min', 'tracking_error.phi.GUIDANCE_MODE_LANDING_CLIMBOUT.max', 'tracking_error.phi.GUIDANCE_MODE_LANDING_CLIMBOUT.std', 'tracking_error.phi.GUIDANCE_MODE_LANDING_CROSSWIND.max', 'tracking_error.phi.GUIDANCE_MODE_LANDING_CROSSWIND.mean', 'tracking_error.phi.GUIDANCE_MODE_LANDING_CROSSWIND.min', 'tracking_error.phi.GUIDANCE_MODE_LANDING_CROSSWIND.std', 'tracking_error.phi.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.max', 'tracking_error.phi.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.min', 'tracking_error.phi.GUIDANCE_MODE_LANDING_FINAL_APPROACH.max', 'tracking_error.phi.GUIDANCE_MODE_LANDING_FINAL_APPROACH.mean', 'tracking_error.phi.GUIDANCE_MODE_LANDING_FINAL_APPROACH.min', 'tracking_error.phi.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.max', 'tracking_error.phi.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.mean', 'tracking_error.phi.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.min', 'tracking_error.phi.GUIDANCE_MODE_LANDING_OVAL_EXIT.max', 'tracking_error.phi.GUIDANCE_MODE_LANDING_OVAL_EXIT.mean', 'tracking_error.phi.GUIDANCE_MODE_TRANSIT_LAUNCH.max', 'tracking_error.phi.GUIDANCE_MODE_TRANSIT_LAUNCH.mean', 'tracking_error.phi.GUIDANCE_MODE_UNKNOWN.std', 'tracking_error.theta.GUIDANCE_MODE_AGL_SLOT_HELIX.max', 'tracking_error.theta.GUIDANCE_MODE_AGL_SLOT_HELIX.mean', 'tracking_error.theta.GUIDANCE_MODE_AGL_SLOT_HELIX.min', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_APPROACH.max', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_APPROACH.mean', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_APPROACH.min', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_APPROACH.std', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_BASE_LEG.max', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_BASE_LEG.mean', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_BASE_LEG.min', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.max', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.mean', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.min', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.max', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.mean', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.min', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_DROP.max', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_DROP.mean', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_DROP.min', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_EXIT.max', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_EXIT.mean', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_EXIT.min', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.max', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.mean', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.min', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.std', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.max', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.mean', 'tracking_error.theta.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.min', 'tracking_error.theta.GUIDANCE_MODE_FIXED_Z_HELIX.max', 'tracking_error.theta.GUIDANCE_MODE_FIXED_Z_HELIX.mean', 'tracking_error.theta.GUIDANCE_MODE_FIXED_Z_HELIX.min', 'tracking_error.theta.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.max', 'tracking_error.theta.GUIDANCE_MODE_FIXED_Z_HELIX_UTURN.mean', 'tracking_error.theta.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.max', 'tracking_error.theta.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.mean', 'tracking_error.theta.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.min', 'tracking_error.theta.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.max', 'tracking_error.theta.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.mean', 'tracking_error.theta.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.min', 'tracking_error.theta.GUIDANCE_MODE_LANDING_CLIMBOUT.max', 'tracking_error.theta.GUIDANCE_MODE_LANDING_CLIMBOUT.mean', 'tracking_error.theta.GUIDANCE_MODE_LANDING_CROSSWIND.mean', 'tracking_error.theta.GUIDANCE_MODE_LANDING_CROSSWIND.min', 'tracking_error.theta.GUIDANCE_MODE_LANDING_CROSSWIND.std', 'tracking_error.theta.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.max', 'tracking_error.theta.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.mean', 'tracking_error.theta.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.min', 'tracking_error.theta.GUIDANCE_MODE_LANDING_FINAL_APPROACH.max', 'tracking_error.theta.GUIDANCE_MODE_LANDING_FINAL_APPROACH.mean', 'tracking_error.theta.GUIDANCE_MODE_LANDING_FINAL_APPROACH.min', 'tracking_error.theta.GUIDANCE_MODE_LANDING_FINAL_APPROACH.std', 'tracking_error.theta.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.max', 'tracking_error.theta.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.mean', 'tracking_error.theta.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.min', 'tracking_error.theta.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.std', 'tracking_error.theta.GUIDANCE_MODE_LANDING_OVAL_EXIT.mean', 'tracking_error.theta.GUIDANCE_MODE_TRANSIT_LAUNCH.min', 'tracking_error.vertical.GUIDANCE_MODE_AGL_SLOT_HELIX.max', 'tracking_error.vertical.GUIDANCE_MODE_AGL_SLOT_HELIX.min', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_APPROACH.max', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_APPROACH.mean', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_BASE_LEG.max', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_BASE_LEG.mean', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_BASE_LEG.min', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_BYPASS.mean', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.max', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.mean', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.min', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_DROP.max', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_DROP.mean', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_DROP.min', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_EXIT.max', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_EXIT.min', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.max', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.mean', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.min', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.max', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.mean', 'tracking_error.vertical.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.min', 'tracking_error.vertical.GUIDANCE_MODE_FIXED_Z_HELIX.max', 'tracking_error.vertical.GUIDANCE_MODE_FIXED_Z_HELIX.min', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.max', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.mean', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.min', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.max', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.mean', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.min', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_CLIMBOUT.max', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_CLIMBOUT.min', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_CROSSWIND.max', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_CROSSWIND.mean', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.max', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.mean', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.min', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_FINAL_APPROACH.max', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_FINAL_APPROACH.mean', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_FINAL_APPROACH.min', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.max', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.mean', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.min', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_OVAL_EXIT.max', 'tracking_error.vertical.GUIDANCE_MODE_LANDING_OVAL_EXIT.mean', 'tracking_error.vertical.GUIDANCE_MODE_TRANSIT_LAUNCH.max', 'tracking_error.vertical.GUIDANCE_MODE_TRANSIT_LAUNCH.min', 'tracking_error.vh.GUIDANCE_MODE_AGL_SLOT_HELIX.max', 'tracking_error.vh.GUIDANCE_MODE_AGL_SLOT_HELIX.mean', 'tracking_error.vh.GUIDANCE_MODE_AGL_SLOT_HELIX.min', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_APPROACH.max', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_APPROACH.mean', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_APPROACH.min', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_BASE_LEG.max', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.max', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_CROSSWIND_LEG.min', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.max', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_DOWNWIND_LEG.mean', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_DROP.max', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_EXIT.max', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_EXIT.min', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.max', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_OVAL_ENTRANCE.std', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.max', 'tracking_error.vh.GUIDANCE_MODE_DELIVERY_OVAL_EXIT.min', 'tracking_error.vh.GUIDANCE_MODE_FIXED_Z_HELIX.max', 'tracking_error.vh.GUIDANCE_MODE_FIXED_Z_HELIX.min', 'tracking_error.vh.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.max', 'tracking_error.vh.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.mean', 'tracking_error.vh.GUIDANCE_MODE_LANDING_BASE_LEG_DESCEND.min', 'tracking_error.vh.GUIDANCE_MODE_LANDING_BASE_LEG_FLAT.mean', 'tracking_error.vh.GUIDANCE_MODE_LANDING_CLIMBOUT.min', 'tracking_error.vh.GUIDANCE_MODE_LANDING_CROSSWIND.max', 'tracking_error.vh.GUIDANCE_MODE_LANDING_CROSSWIND.mean', 'tracking_error.vh.GUIDANCE_MODE_LANDING_CROSSWIND.std', 'tracking_error.vh.GUIDANCE_MODE_LANDING_DOWNWIND_LEG.mean', 'tracking_error.vh.GUIDANCE_MODE_LANDING_FINAL_APPROACH.max', 'tracking_error.vh.GUIDANCE_MODE_LANDING_FINAL_APPROACH.mean', 'tracking_error.vh.GUIDANCE_MODE_LANDING_FINAL_APPROACH.min', 'tracking_error.vh.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.max', 'tracking_error.vh.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.mean', 'tracking_error.vh.GUIDANCE_MODE_LANDING_OVAL_ENTRANCE.min', 'tracking_error.vh.GUIDANCE_MODE_LANDING_OVAL_EXIT.mean', 'tracking_error.vh.GUIDANCE_MODE_TRANSIT.max', 'tracking_error.vh.GUIDANCE_MODE_TRANSIT.mean', 'tracking_error.vh.GUIDANCE_MODE_TRANSIT_LAUNCH.max', 'tracking_error.vh.GUIDANCE_MODE_TRANSIT_LAUNCH.mean', 'tracking_error.vh.GUIDANCE_MODE_TRANSIT_LAUNCH.min', 'weather.boot.air_temp.max', 'weather.boot.air_temp.std', 'weather.boot.rel_humidity.max', 'weather.boot.rel_humidity.std', 'weather.boot.static_pressure.max', 'weather.boot.static_pressure.std', 'weather.boot.wind_dir.min', 'weather.delivery.air_temp.max', 'weather.delivery.air_temp.std', 'weather.delivery.rel_humidity.max', 'weather.delivery.rel_humidity.std', 'weather.delivery.static_pressure.max', 'weather.delivery.static_pressure.std', 'weather.delivery.wind_dir.max', 'weather.delivery.wind_dir.std', 'weather.delivery.wind_mag.max', 'weather.delivery.wind_mag.std', 'weather.flight.air_temp.std', 'weather.flight.rel_humidity.max', 'weather.flight.rel_humidity.min', 'weather.flight.rel_humidity.std', 'weather.flight.static_pressure.max', 'weather.flight.static_pressure.min', 'weather.flight.wind_dir.max', 'weather.flight.wind_dir.mean', 'weather.flight.wind_dir.min', 'weather.flight.wind_dir.std', 'weather.flight.wind_mag.min', 'weather.flight_failure.air_temp.max', 'weather.flight_failure.rel_humidity.std', 'weather.flight_failure.static_pressure.max', 'weather.flight_failure.wind_dir.max', 'weather.flight_failure.wind_mag.max', 'weather.launch.air_temp.std', 'weather.launch.rel_humidity.std', 'weather.launch.static_pressure.max', 'weather.launch.static_pressure.std', 'weather.launch.wind_dir.max', 'weather.launch.wind_dir.std', 'weather.launch.wind_mag.max', 'weather.launch.wind_mag.std', 'weather.launcher_identified.air_temp.std', 'weather.launcher_identified.rel_humidity.std', 'weather.launcher_identified.static_pressure.std', 'weather.launcher_identified.wind_dir.max', 'weather.launcher_identified.wind_dir.std', 'weather.launcher_identified.wind_mag.max', 'weather.launcher_identified.wind_mag.std', 'weather.mission_failure.air_temp.max', 'weather.mission_failure.air_temp.std', 'weather.mission_failure.rel_humidity.max', 'weather.mission_failure.rel_humidity.std', 'weather.mission_failure.static_pressure.max', 'weather.mission_failure.static_pressure.std', 'weather.mission_failure.wind_dir.max', 'weather.mission_failure.wind_dir.std', 'weather.mission_failure.wind_mag.max', 'weather.mission_failure.wind_mag.std', 'weather.recovery.air_temp.std', 'weather.recovery.rel_humidity.std', 'weather.recovery.static_pressure.std', 'weather.recovery.wind_dir.max', 'weather.recovery.wind_dir.std', 'weather.recovery.wind_mag.max', 'weather.recovery.wind_mag.std', 'weather.safety_failure.air_temp.std', 'weather.safety_failure.rel_humidity.std', 'weather.safety_failure.wind_mag.std', 'zipnav.largest_jump_d_m', 'zipnav.largest_jump_e_m', 'zipnav.largest_jump_n_m', 'zipnav.launch_dead_reckoning_err_d_m', 'zipnav.launch_dead_reckoning_err_e_m', 'zipnav.launch_dead_reckoning_err_n_m']
+Index(['energy_analysis.bms.in_flight.avionics_current.std',
+       'energy_analysis.bms.in_flight.current.mean',
+       'energy_analysis.bms.post_flight.avionics_a_capacity',
+       'motor_pod.aft.motor_temp_degC.std',
+       'tracking_error.airspeed.GUIDANCE_MODE_TRANSIT.max',
+       'tracking_error.airspeed.GUIDANCE_MODE_TRANSIT.std',
+       'tracking_error.phi.GUIDANCE_MODE_TRANSIT.max',
+       'tracking_error.phi.GUIDANCE_MODE_TRANSIT.min',
+       'tracking_error.theta.GUIDANCE_MODE_TRANSIT.max',
+       'tracking_error.theta.GUIDANCE_MODE_TRANSIT.min',
+       'tracking_error.vertical.GUIDANCE_MODE_FIXED_Z_HELIX.mean',
+       'tracking_error.vertical.GUIDANCE_MODE_TRANSIT.min',
+       'tracking_error.vh.GUIDANCE_MODE_TRANSIT.min',
+       'weather.flight.wind_mag.max',
+       'weather.flight_failure.rel_humidity.max',
+       'weather.flight_failure.static_pressure.std',
+       'weather.flight_failure.wind_dir.std',
+       'weather.flight_failure.wind_mag.std',
+       'weather.recovery.static_pressure.max', 'highest_failure_level.id'],
+      dtype='object')
+Model trained on 2863 flights with 20 features
+Ruuning tests on 243 flights
+1
+[0.92927508 0.0684566  0.00226832]
+1
+[0.95431382 0.04309939 0.00258679]
+1
+[0.97086151 0.02772032 0.00141817]
+1
+[0.95061866 0.04785927 0.00152207]
+1
+[0.94388727 0.05440215 0.00171057]
+1
+[0.94846157 0.04955461 0.00198382]
+1
+[0.94417167 0.0542783  0.00155003]
+1
+[0.94942735 0.04870185 0.0018708 ]
+1
+[0.95037412 0.04805882 0.00156707]
+1
+[0.93926645 0.05905253 0.00168103]
+1
+[0.95019456 0.04838168 0.00142376]
+1
+[0.93813277 0.06008084 0.00178639]
+1
+[0.94326294 0.05450278 0.00223428]
+1
+[0.9354129 0.0625528 0.0020343]
+2
+[0.65518736 0.34317662 0.00163602]
+1
+[0.92901104 0.06751692 0.00347204]
+1
+[0.94306493 0.05419345 0.00274162]
+1
+[0.95651858 0.04189802 0.0015834 ]
+1
+[0.95345932 0.04437327 0.0021674 ]
+2
+[0.03119981 0.89560962 0.07319057]
+1
+[0.94172458 0.05641825 0.00185717]
+1
+[0.95970668 0.03853108 0.00176224]
+1
+[0.94301127 0.05544802 0.00154071]
+1
+[0.89291611 0.09856321 0.00852068]
+1
+[0.95500064 0.04309366 0.0019057 ]
+1
+[0.94138516 0.05609167 0.00252317]
+1
+[0.9434237  0.05420308 0.00237322]
+1
+[0.9414656  0.05468593 0.00384847]
+1
+[0.91172263 0.08303483 0.00524254]
+1
+[0.95278831 0.04501047 0.00220122]
+1
+[0.93613529 0.06156044 0.00230427]
+1
+[0.94223494 0.05555494 0.00221012]
+1
+[0.93992509 0.0578414  0.00223351]
+1
+[0.9428806  0.05484002 0.00227938]
+2
+[1.05512756e-04 9.94731050e-01 5.16343735e-03]
+1
+[0.8760806  0.12121643 0.00270297]
+1
+[0.92677689 0.07010905 0.00311406]
+1
+[0.93316936 0.06452579 0.00230485]
+1
+[0.93669309 0.06034844 0.00295846]
+1
+[0.91643119 0.07997881 0.00358999]
+1
+[0.94917216 0.04880222 0.00202562]
+1
+[0.96598946 0.03280019 0.00121035]
+1
+[0.94601044 0.05237332 0.00161624]
+1
+[0.94482563 0.05376519 0.00140918]
+1
+[0.93079386 0.06656602 0.00264012]
+1
+[0.95689137 0.04083505 0.00227358]
+1
+[0.94685859 0.05091397 0.00222744]
+1
+[0.96180448 0.03722097 0.00097455]
+1
+[0.94013832 0.05799368 0.001868  ]
+1
+[0.93602003 0.06162515 0.00235482]
+1
+[0.94660023 0.05144951 0.00195026]
+1
+[9.27935006e-01 7.13321316e-02 7.32862468e-04]
+2
+[0.70175016 0.29694761 0.00130223]
+1
+[0.9555326  0.04257664 0.00189076]
+1
+[0.95011451 0.04795975 0.00192574]
+1
+[0.93924055 0.05801585 0.00274361]
+1
+[0.95410367 0.04426611 0.00163022]
+1
+[0.89698414 0.10002219 0.00299367]
+1
+[0.95726778 0.04149661 0.00123561]
+1
+[0.9344552  0.06325486 0.00228993]
+2
+[0.7317849  0.26583575 0.00237935]
+1
+[0.94957505 0.04837537 0.00204958]
+1
+[0.94135939 0.05656498 0.00207563]
+1
+[0.93612141 0.06169366 0.00218494]
+2
+[0.09006614 0.90607535 0.00385851]
+2
+[0.77771539 0.21833865 0.00394596]
+2
+[0.48286224 0.50902491 0.00811286]
+2
+[0.78044883 0.21323511 0.00631606]
+1
+[0.94086169 0.05740842 0.00172989]
+1
+[0.94235207 0.05573313 0.00191479]
+1
+[0.95458202 0.04373803 0.00167996]
+1
+[0.93720551 0.06049589 0.0022986 ]
+1
+[0.93081579 0.06743917 0.00174504]
+1
+[0.95002635 0.04750287 0.00247078]
+1
+[0.94051483 0.05714518 0.00233998]
+1
+[0.93405332 0.06384018 0.0021065 ]
+1
+[0.95147609 0.04692643 0.00159748]
+1
+[0.94805747 0.05000515 0.00193738]
+1
+[0.94279421 0.05497462 0.00223117]
+1
+[0.94749595 0.05037983 0.00212422]
+1
+[0.94881158 0.04864768 0.00254074]
+1
+[0.94078872 0.05719119 0.00202009]
+1
+[0.83681699 0.15902557 0.00415744]
+1
+[9.74552297e-01 2.49563947e-02 4.91308670e-04]
+1
+[0.94415201 0.05407005 0.00177793]
+1
+[0.93438748 0.06274602 0.00286651]
+1
+[0.94151491 0.05686767 0.00161742]
+1
+[0.93639363 0.06078135 0.00282501]
+1
+[0.94252527 0.05574064 0.00173409]
+1
+[0.94988701 0.04870526 0.00140773]
+1
+[8.88704505e-01 1.10874814e-01 4.20681491e-04]
+2
+[0.57451342 0.42099315 0.00449343]
+1
+[0.94534679 0.0526648  0.00198842]
+2
+[0.11652936 0.87611589 0.00735475]
+2
+[0.00107756 0.98181914 0.0171033 ]
+1
+[0.92220703 0.07652977 0.0012632 ]
+1
+[9.44187607e-01 5.49952052e-02 8.17187602e-04]
+2
+[0.04747627 0.87540213 0.0771216 ]
+1
+[0.94348411 0.05403288 0.00248301]
+1
+[0.9454268  0.05220692 0.00236629]
+1
+[0.93774435 0.06006236 0.00219328]
+1
+[0.95952991 0.03868761 0.00178248]
+2
+[0.03327057 0.89020352 0.07652591]
+1
+[0.94058896 0.05747823 0.00193281]
+1
+[0.94138147 0.05696046 0.00165807]
+1
+[0.92627031 0.07192231 0.00180738]
+1
+[0.9539688  0.04456472 0.00146649]
+1
+[0.95533458 0.04320761 0.00145781]
+1
+[0.94510921 0.05288425 0.00200655]
+1
+[0.94269517 0.05521329 0.00209153]
+1
+[0.95007707 0.04714675 0.00277619]
+1
+[0.97049094 0.02818512 0.00132394]
+1
+[0.93745767 0.06074177 0.00180056]
+1
+[0.93706367 0.06106733 0.001869  ]
+1
+[0.91436944 0.08347033 0.00216022]
+1
+[0.92971819 0.06778378 0.00249802]
+1
+[0.94256748 0.05565833 0.00177419]
+1
+[0.94981131 0.04862508 0.00156362]
+1
+[0.94259416 0.05546883 0.00193701]
+1
+[0.93833967 0.0592756  0.00238472]
+1
+[0.93085727 0.0664676  0.00267513]
+1
+[0.93464412 0.06333479 0.00202108]
+1
+[0.96727688 0.03140708 0.00131605]
+1
+[0.96249123 0.03614033 0.00136844]
+1
+[0.94905434 0.04961679 0.00132887]
+1
+[0.95062431 0.04784708 0.00152861]
+1
+[0.931159   0.06696661 0.00187438]
+1
+[0.93677192 0.06128492 0.00194316]
+1
+[0.93462412 0.06262678 0.0027491 ]
+1
+[0.95396658 0.04426519 0.00176823]
+1
+[0.95465688 0.04392151 0.00142161]
+1
+[0.95405516 0.04456391 0.00138093]
+1
+[0.92251269 0.07579139 0.00169591]
+1
+[0.94542109 0.05305596 0.00152294]
+1
+[0.91143149 0.08629149 0.00227702]
+1
+[0.9417049  0.05531542 0.00297969]
+1
+[9.58102370e-01 4.10083553e-02 8.89274337e-04]
+1
+[0.94762555 0.05011453 0.00225992]
+1
+[0.93723514 0.05986011 0.00290474]
+2
+[0.04193059 0.87732636 0.08074305]
+1
+[0.95351447 0.0448353  0.00165023]
+1
+[0.94947021 0.04913097 0.00139882]
+1
+[0.94704447 0.05130203 0.00165351]
+1
+[0.94769536 0.05069691 0.00160773]
+2
+[0.05150004 0.83504547 0.11345449]
+1
+[0.94321659 0.05452004 0.00226337]
+1
+[0.94893653 0.04891329 0.00215018]
+2
+[0.02930682 0.90086765 0.06982553]
+1
+[9.47253724e-01 5.18040192e-02 9.42256611e-04]
+1
+[0.95683864 0.04193994 0.00122142]
+1
+[0.9528861  0.04539599 0.00171791]
+1
+[0.92890745 0.0684662  0.00262635]
+1
+[0.9196346  0.07693915 0.00342626]
+1
+[0.94895598 0.04887458 0.00216944]
+4
+[0.06101518 0.62316193 0.31582289]
+1
+[0.92813718 0.06965132 0.0022115 ]
+1
+[0.93491734 0.06269371 0.00238895]
+1
+[0.92440387 0.07379151 0.00180462]
+1
+[9.35680253e-01 6.36171389e-02 7.02608299e-04]
+1
+[0.93352806 0.06405617 0.00241577]
+1
+[0.85746986 0.13209232 0.01043782]
+1
+[0.94408646 0.05410788 0.00180565]
+1
+[0.92384699 0.07323975 0.00291326]
+1
+[0.94708067 0.05075559 0.00216374]
+1
+[0.95389708 0.04483241 0.00127051]
+1
+[0.9287519  0.06925573 0.00199237]
+1
+[0.9496487  0.04877133 0.00157997]
+1
+[0.94092857 0.0576069  0.00146453]
+1
+[0.93238414 0.06557517 0.00204069]
+1
+[0.93961358 0.05837383 0.00201259]
+1
+[0.93936013 0.05912287 0.001517  ]
+1
+[0.93459943 0.06298544 0.00241513]
+1
+[0.94987108 0.04841616 0.00171276]
+1
+[0.94568197 0.05267018 0.00164785]
+1
+[0.93339711 0.06469111 0.00191178]
+1
+[0.94715528 0.05110454 0.00174018]
+4
+[0.07149865 0.48478713 0.44371421]
+2
+[0.42185804 0.56963031 0.00851165]
+1
+[0.95114786 0.04727178 0.00158037]
+1
+[0.93796655 0.0597275  0.00230595]
+1
+[0.93804517 0.06005899 0.00189584]
+1
+[0.94671034 0.05148564 0.00180401]
+1
+[0.94771073 0.05046188 0.00182739]
+1
+[0.91715417 0.08094253 0.0019033 ]
+1
+[0.94651502 0.05170175 0.00178323]
+1
+[0.90143916 0.09648884 0.002072  ]
+1
+[0.92793783 0.0691201  0.00294207]
+1
+[0.93367566 0.06364184 0.0026825 ]
+1
+[0.94269382 0.05542506 0.00188112]
+1
+[0.9508156  0.04752513 0.00165927]
+1
+[0.94603818 0.05209031 0.00187151]
+1
+[0.94486967 0.05343863 0.00169169]
+1
+[0.93173227 0.06579964 0.00246809]
+1
+[0.96268014 0.03555474 0.00176512]
+1
+[0.93545886 0.06246183 0.00207931]
+2
+[0.03919188 0.89594926 0.06485886]
+1
+[0.96511977 0.0334895  0.00139073]
+1
+[0.91682004 0.08075903 0.00242093]
+1
+[0.93946882 0.05899298 0.00153821]
+1
+[0.94039189 0.05716658 0.00244153]
+1
+[0.94694865 0.05087255 0.0021788 ]
+1
+[0.93510905 0.06240491 0.00248604]
+1
+[0.94225614 0.05591417 0.00182969]
+1
+[0.94020612 0.05737614 0.00241773]
+1
+[0.94692555 0.05114651 0.00192795]
+1
+[0.94700012 0.05186242 0.00113746]
+1
+[0.94443201 0.05383936 0.00172863]
+1
+[0.89645915 0.10067994 0.00286091]
+2
+[0.55702822 0.4387858  0.00418598]
+2
+[0.00759523 0.98546168 0.00694309]
+2
+[0.18652366 0.8064326  0.00704374]
+1
+[0.92927508 0.0684566  0.00226832]
+1
+[0.95431382 0.04309939 0.00258679]
+1
+[0.97086151 0.02772032 0.00141817]
+1
+[0.95061866 0.04785927 0.00152207]
+1
+[0.94388727 0.05440215 0.00171057]
+1
+[0.94846157 0.04955461 0.00198382]
+1
+[0.94417167 0.0542783  0.00155003]
+1
+[0.94942735 0.04870185 0.0018708 ]
+1
+[0.95037412 0.04805882 0.00156707]
+1
+[0.93926645 0.05905253 0.00168103]
+1
+[0.95019456 0.04838168 0.00142376]
+1
+[0.93813277 0.06008084 0.00178639]
+1
+[0.94326294 0.05450278 0.00223428]
+1
+[0.9354129 0.0625528 0.0020343]
+2
+[0.65518736 0.34317662 0.00163602]
+1
+[0.92901104 0.06751692 0.00347204]
+1
+[0.94306493 0.05419345 0.00274162]
+1
+[0.95651858 0.04189802 0.0015834 ]
+1
+[0.95345932 0.04437327 0.0021674 ]
+2
+[0.03119981 0.89560962 0.07319057]
+1
+[0.94172458 0.05641825 0.00185717]
+1
+[0.95970668 0.03853108 0.00176224]
+1
+[0.94301127 0.05544802 0.00154071]
+4
+[0.08745539 0.30569508 0.60684953]
+4
+[0.12371457 0.41475402 0.46153141]
+4
+[0.10082754 0.3806191  0.51855336]
+4
+[0.08767785 0.30660287 0.60571928]
+4
+[0.09094416 0.30873809 0.60031775]
+4
+[0.08745887 0.30570914 0.60683199]
+4
+[0.08745539 0.30569508 0.60684953]
+4
+[0.10467969 0.31976702 0.57555329]
+4
+[0.08745981 0.30571285 0.60682735]
+Predicted:4,actual:2
+%success=6.101517649099975 %mission-failure=62.31619309485538 %flight-failure=31.58228925604465
+Predicted:4,actual:2
+%success=7.149865311505992 %mission-failure=48.47871321561784 %flight-failure=44.37142147287614
+Predicted:2,actual:1
+%success=18.652365746567067 %mission-failure=80.6432602135775 %flight-failure=0.7043740398554232
+Predicted 227/243 correctly.
+Predicted 19/243 incorrectly.
+Predicted 16/41 incorrectly. ==> predicted 1, actual 2
+Total accuracy:92.18106995884774
+
+Process finished with exit code 0
