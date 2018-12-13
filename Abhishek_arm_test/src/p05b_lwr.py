@@ -3,6 +3,7 @@ import numpy as np
 import util
 from sklearn.preprocessing import StandardScaler
 import scipy as sc
+import pandas as pd
 
 from linear_model import LinearModel
 
@@ -15,24 +16,38 @@ def main(tau, train_path, eval_path):
         train_path: Path to CSV file containing dataset for training.
         eval_path: Path to CSV file containing dataset for evaluation.
     """
+    ##
+    ##
     # Load training set
-    x_train, y_train,x_eval,y_eval = util.load_dataset_new(train_path,eval_path)
+    x_train_org, y_train,x_eval_org,y_eval, data_frame = util.load_dataset_new(train_path,eval_path)
 
     # Feature Scaling
     sc_X = StandardScaler()
-    x_train = sc_X.fit_transform(x_train)
-    X_test_transformed = sc_X.fit_transform(x_eval)
+    x_train= util.add_intercept(sc_X.fit_transform(x_train_org))
+    x_eval= util.add_intercept(sc_X.fit_transform(x_eval_org))
+    #all_zeros = np.where(~x_train.any(axis=0))[0]
+    #print(all_zeros)
+
 
     print("Train shape:" + str(x_train.shape))
     print("Eval shape:" + str(x_eval.shape))
-
     # Fit a LWR model
     clf = LocallyWeightedLinearRegression(tau)
-    clf.fit(x_train, y_train)
+    clf.fit(x_train, y_train, 0.1)
+    y_train_out_real = np.dot(x_train, clf.theta)
 
-    p_eval = clf.predict(X_test_transformed)
+    #print(y_train_out)
+    p_eval = clf.predict(x_eval)
 
-    print(p_eval)
+    def give_error(y_out, y):
+        cnt = 0
+        for i in range(len(y_out)):
+            if (y_out[i] == y[i]):
+                cnt +=1
+        return cnt/len(y_out)
+    #print(give_error(p_eval,y_eval))
+    print(p_eval, y_eval)
+    ##print(np.int(np.round(np.abs(p_eval))+1), y_eval)
     # for i in range(len(p_eval)):
     #     if (Y_Pred_first_pass[i] == 0):
     #         Y_Pred_first_pass[i] = 1
@@ -71,16 +86,17 @@ class LocallyWeightedLinearRegression(LinearModel):
     def __init__(self, tau):
         super(LocallyWeightedLinearRegression, self).__init__()
         self.tau = tau
-        self.x = None
-        self.y = None
+        self.x_train = None
+        self.y_train = None
 
-    def fit(self, x, y):
+    def fit(self, x, y, l):
         """Fit LWR by saving the training set.
 
         """
         # *** START CODE HERE ***
-        self.x = x
-        self.y = y
+        self.x_train = x
+        self.y_train = y
+        self.theta = self.normal_eq_theta_reg(self.x_train, self.y_train, 1)
         # *** END CODE HERE ***
 
     def predict(self, x):
@@ -93,42 +109,48 @@ class LocallyWeightedLinearRegression(LinearModel):
             Outputs of shape (m,).
         """
         # *** START CODE HERE ***
-        if self.x is None or self.y is None:
+        if self.x_train is None or self.y_train is None:
             raise RuntimeError('Must call fit before predict.')
+        m = self.x_train.shape[0]
+        m_new = x.shape[0]
+        y_predict = np.array([])
+        for k in range(0,m_new):
+            wi = np.array([])
+            for i in range(0,m):
+                wi_int = self.weight(self.x_train[i], x[k], self.tau)
+                wi = np.concatenate(([wi], [wi_int]), axis=None)
+            W = np.diag(wi/2)
+            #print(W)
+            theta_new = self.normal_eq_theta_lwr(self.x_train, W, self.y_train)
+            ##theta_new = self.normal_eq_theta_reg(self.x_train, self.y_train, 0.05)
+            y_new = np.dot(theta_new, x[k])
+            y_predict = np.concatenate(([y_predict], [y_new]), axis=None)
+        y_out = y_predict
 
-        y_hat = []
-        for x_i in x:
-            w_i = self._get_weights(x_i)
-            print("W Shape:" + str(w_i.shape))
-            self.theta = self._get_theta(w_i)
+        return y_out
 
-            y_hat.append(self.theta.T.dot(x_i))
-
-        y_hat = np.array(y_hat)
-
-        return y_hat
-
-    def _get_weights(self, x):
-        """Get LWR weights for an example x."""
-        x_diff = x - self.x
-        w = np.exp(-np.sum(x_diff ** 2, axis=1) / (2 * self.tau ** 2))
-        w = np.diag(w)
-
+    def weight(self, x, x_input, tau):
+        z = np.linalg.norm(np.subtract(x_input,x), 2)
+        w = np.exp((-1/2)*(np.power(z,2)/np.power(tau,2)))
         return w
 
     def normal_eq_theta_lwr(self, x, W, y):
-        a = np.dot(x.T,W)
-        b = np.dot(a,x)
-        c = np.dot(a,y)
-        theta = np.dot(np.linalg.inv(b),c)
+        a = np.dot(x.T, W)
+        b = np.dot(a, x)
+        c = np.dot(a, y)
+        #a = np.matmul(x.T, W)
+        #b = np.matmul(a, x)
+        #c = np.matmul(a, y)
+        #print(np.linalg.det(b))
+        #exit(1)
+        theta = np.dot(np.linalg.inv(b), c)
         return theta
 
-    def _get_theta(self, w):
-        """Get theta (linear coefficients) given inputs and weights."""
-        #x, y = self.x, self.y
-        #A = sc.sparse.csc_matrix(x.T.dot(w).dot(x))
-        #theta = sc.sparse.linalg.inv(A).dot(x.T).dot(w).dot(y)
-        theta = self.normal_eq_theta_lwr(self.x, w, self.y)
+    def normal_eq_theta_reg(self, x, y,l):
+        a = np.dot(x.T,x) + (l * np.eye(x.shape[1]))
+        b = np.dot(x.T,y)
+        theta = np.dot(np.linalg.inv(a),b)
         return theta
+
         # *** END CODE HERE ***
 
